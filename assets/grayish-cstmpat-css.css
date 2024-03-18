@@ -1,0 +1,1271 @@
+@charset "UTF-8";
+
+/* grayishの1カラム向け　サンプルコード用CSS */
+
+/* ========== common start ==========　*/
+/* フロントページのメインコンテンツ上下の余白対策 */
+.body.skin-grayish.front-top-page .breadcrumb,
+.body.skin-grayish.front-top-page .article-header,
+.body.skin-grayish.front-top-page .pr-label-s {
+  display: none;
+}
+
+.body.skin-grayish.front-top-page :where(.content-top, .content-bottom) {
+  margin: 0;
+}
+
+.body.skin-grayish.front-top-page .content .main {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.body.skin-grayish.front-top-page :where(.breadcrumb.sbp-main-before+.content, .breadcrumb.pbp-main-before+.content) {
+  margin-top: 0px;
+}
+
+.body.skin-grayish.front-top-page .content {
+  margin-top: 0;
+}
+
+.body.skin-grayish.front-top-page .entry-content {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.body.skin-grayish.front-top-page .article {
+  margin-bottom: 0;
+}
+
+/* フロントページのメインコンテンツ上下の余白対策 end*/
+
+/* 画像ブロックは以下で画面幅に */
+.cstm-blk-fullwide {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+}
+
+/*参考 画像ブロックの高さ調整 */
+.cstm-blk-fullwide.cstm-blk-img-height img {
+  height: 50vmin;
+}
+
+/* カバーブロック用：インナーブロックの中央寄せを追加 */
+.cstm-blk-fullwide-inner {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  padding: 0 calc(50vw - 50%);
+}
+
+/* テーマカスタマイザーで設定した英字Font + 日本語は　Cocoon設定のサイトフォント選択Font*/
+.cstm-skin-font-set {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+/* 英字Font Montserrat　+ 日本語は　Cocoon設定のサイトフォント選択Font　*/
+.cstm-font-montserrat {
+  font-family: "Montserrat", var(--skin-get-site-font);
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+/* 英字Font Lato　+ 日本語は　Cocoon設定のサイトフォント選択Font　*/
+.cstm-font-lato {
+  font-family: "Lato", var(--skin-get-site-font);
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+/* 英字Font Inknut Antiqua　+ 日本語は　Cocoon設定のサイトフォント選択Font　*/
+.cstm-font-inknut-antiqua {
+  font-family: "Inknut Antiqua", var(--skin-get-site-font);
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+/* 英字Font Spectral　+ 日本語は　Cocoon設定のサイトフォント選択Font　*/
+.cstm-font-spectral {
+  font-family: "Spectral", var(--skin-get-site-font);
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+/* 英字Font Lora　+ 日本語は　Cocoon設定のサイトフォント選択Font　*/
+.cstm-font-lora {
+  font-family: "Lora", var(--skin-get-site-font);
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+/* 英字Font Jost　+ 日本語は　Cocoon設定のサイトフォント選択Font　*/
+.cstm-font-jost {
+  font-family: "Jost", var(--skin-get-site-font);
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+/* 英字Font Roboto Slab　+ 日本語は　Cocoon設定のサイトフォント選択Font　*/
+.cstm-font-roboto-slab {
+  font-family: "Roboto Slab", var(--skin-get-site-font);
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+/* H見出しのスタイルクリア */
+.article h2.cstm-head,
+.article h3.cstm-head,
+.article h4.cstm-head,
+.article h5.cstm-head,
+.article h6.cstm-head {
+  font-weight: 400;
+  letter-spacing: .1rem;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  position: static;
+}
+
+.article h2.cstm-head::before,
+.article h3.cstm-head::before,
+.article h4.cstm-head::before {
+  display: none;
+}
+
+.article h2.cstm-head {
+  font-size: 64px;
+  font-weight: 200;
+}
+
+/* More btn */
+p.cstm-more-btn {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  line-height: 1.2;
+  width: 100%;
+  padding-right: 6em;
+}
+
+p.cstm-more-btn a {
+  display: inline-block;
+  width: fit-content;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  position: relative;
+}
+
+p.cstm-more-btn a::before {
+  display: block;
+  content: "";
+  background-color: var(--LtGray_S50);
+  width: 4em;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 120%;
+  margin: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+p.cstm-more-btn a:hover::before {
+  transform: translate(1em);
+}
+
+/* H2見出しのしたのテキストのスタイル */
+.article h2.cstm-head+.cstm-sub-text {
+  width: fit-content;
+  position: relative;
+}
+
+.article h2.cstm-head+.cstm-sub-text::before,
+.article h2.cstm-head+.cstm-sub-text.leftype::before {
+  display: block;
+  content: "";
+  background-color: var(--skin-grayish-site-main-hover);
+  width: 2ch;
+  height: 2px;
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.article h2.cstm-head+.cstm-sub-text.leftype::before {
+  right: unset;
+  margin: unset;
+  z-index: 1;
+}
+
+/* ========== common end ==========　*/
+
+/* ========== cstm-pat-common start ==========　*/
+/* サンプルパターン共通 */
+
+/* ========== clip-path start ==========　*/
+/* clip-path */
+/* 下 */
+.cstm-clip-lower {
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  height: 5vw;
+  min-height: 5vw;
+}
+
+/* 下　右　*/
+.cstm-clip-lower-r {
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  height: 5vw;
+  min-height: 5vw;
+}
+
+/* 上 */
+.cstm-clip-upper {
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  height: 5vw;
+  min-height: 5vw;
+}
+
+/* 上　右　*/
+.cstm-clip-upper-r {
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  height: 5vw;
+  min-height: 5vw;
+}
+
+/* 三角形 上 */
+.cstm-clip-upper-kaku {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  height: 5vw;
+  min-height: 5vw;
+}
+
+/* 三角形 下 */
+.cstm-clip-lower-kaku {
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  height: 5vw;
+  min-height: 5vw;
+}
+
+/* ========== clip-path end ==========　*/
+
+
+/* coverブロック内の上下の余白 */
+/* clip-pathなし */
+:where(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7)>.wp-block-cover__inner-container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* .cstm-clip-upperの次のカバーブロック内の上の余白を半分に */
+.cstm-clip-upper+.wp-block-cover>.wp-block-cover__inner-container,
+.cstm-clip-upper-r+.wp-block-cover>.wp-block-cover__inner-container,
+.cstm-clip-upper-kaku+.wp-block-cover>.wp-block-cover__inner-container {
+  padding-top: 3rem;
+}
+
+/* cstm-clip-lowerの次のカバーブロック内の上の余白を半分に */
+.cstm-clip-lower+.wp-block-cover>.wp-block-cover__inner-container,
+.cstm-clip-lower-r+.wp-block-cover>.wp-block-cover__inner-container,
+.cstm-clip-lower-kaku+.wp-block-cover>.wp-block-cover__inner-container {
+  padding-top: 3rem;
+}
+
+/* ========== cstm-pat-common end ==========　*/
+
+/* ========== cstm-pat-1 start ==========　*/
+/* cstm-pat-1 News作例1のブロック */
+
+/* cstm-pat-1 作例1のH2見出し横の余白 */
+.cstm-pat-1>.wp-block-cover__inner-container h2.cstm-head {
+  padding-right: 32px;
+}
+
+/* cstm-pat-1 作例1の新着情報ブロック　横線 */
+.cstm-pat-1 .wp-block-column .info-list-box.block-box {
+  border-left: solid 1px var(--LtGray_T0);
+  padding-left: 32px;
+}
+
+/* cstm-pat-1 作例1の新着情報ブロック　*/
+.cstm-pat-1 .is-style-divider-line .info-list-item {
+  border-bottom: none;
+  padding: 20px 0;
+}
+
+/* 背景画像ありのダークモード */
+.cstm-pat-1.backimg-pat .wp-block-column .info-list-box.block-box {
+  border-left: solid 1px var(--white);
+}
+
+.cstm-pat-1.backimg-pat .wp-block-column .info-list-box.block-box .info-list-item-content .info-list-item-content-link {
+  color: var(--white);
+}
+
+.cstm-pat-1.backimg-pat .wp-block-column .info-list-box.block-box .info-list-item-meta .entry-category {
+  color: var(--LtGray_S50);
+  border: none;
+  background-color: var(--white);
+}
+
+.cstm-pat-1.backimg-pat p.cstm-more-btn a::before {
+  background-color: var(--white);
+
+}
+
+/* ========== back-gradation start ==========　*/
+/* カバーブロック内を斜めにする */
+.pat1-back-gradation {
+  background-image: linear-gradient(-45deg, var(--LtBlue_T70) 0%, var(--LtBlue_T70) 50%, var(--white) 50%, var(--white) 100%);
+}
+
+/* ========== back-gradation end ==========　*/
+
+/* ========== cstm-pat-1 end ==========　*/
+
+/* ========== cstm-pat-2 start ==========　*/
+/* cstm-pat-2 */
+/* NewPost 新着記事一覧をブロックで作るデモ */
+.cstm-pat-2.cstm-blk-fullwide-inner {
+  min-height: 430px;
+}
+
+.cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap {
+  line-height: 1.6;
+}
+
+.cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards {
+  display: grid;
+  place-content: center;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  -moz-column-gap: 4px;
+  column-gap: 4px;
+  row-gap: 4px;
+}
+
+/* 新着記事ウィジェット　指定のクラス名のときのみ　投稿日・更新日を表示 */
+.cstm-pat-2 .new-entry-card.widget-entry-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cstm-pat-2 .new-entry-card-thumb.widget-entry-card-thumb {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.cstm-pat-2 .new-entry-card .new-entry-card-content.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  height: 100%;
+  padding: 0.6em 0;
+}
+
+.cstm-pat-2 .new-entry-card-title.widget-entry-card-title.card-title {
+  -webkit-line-clamp: unset;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.cstm-pat-2 .new-entry-card-date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: .9em;
+  color: var(--skin-grayish-site-sub-color);
+  margin-top: auto;
+}
+
+.cstm-pat-2 .new-entry-card-post-date.widget-entry-card-post-date.post-date,
+.cstm-pat-2 .new-entry-card-update-date.widget-entry-card-update-date.post-update {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  position: relative;
+}
+
+
+.cstm-pat-2 .new-entry-card-post-date.widget-entry-card-post-date.post-date::before,
+.cstm-pat-2 .new-entry-card-update-date.widget-entry-card-update-date.post-update::before {
+  display: inline-block;
+  content: "\f017";
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: fit-content;
+  height: auto;
+  margin-right: 3px;
+}
+
+.cstm-pat-2 .new-entry-card-update-date.widget-entry-card-update-date.post-update::before {
+  font-weight: 900;
+  content: "\f1da";
+}
+
+
+/* More btn */
+.cstm-pat-2 p.cstm-more-btn {
+  justify-content: center;
+  padding-right: 0em;
+}
+
+/* ========== cstm-pat-2 end ==========　*/
+
+/* ========== cstm-pat-3 start ==========　*/
+/* cstm-pat-3 */
+/* Aboutをブロックで作るデモ */
+
+/* 背景に斜めのグラデーション */
+.pat3-back-gradation {
+  background-image: linear-gradient(-45deg, var(--LtBlue_T90) 0%, var(--LtBlue_T90) 50%, var(--white) 50%, var(--white) 100%);
+}
+
+/* 背景に斜めのグラデーションの場合はカバーブロック内の余白を多めに */
+.cstm-pat-3.pat3-back-gradation>.wp-block-cover__inner-container {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+/* More btn */
+.cstm-pat-3 p.cstm-more-btn {
+  padding-right: 1em;
+}
+
+/* テキストエリアずらし横並びタイプ */
+.cstm-pat-3.shift-type>.wp-block-cover__inner-container {
+  padding-bottom: 12rem;
+}
+
+.cstm-pat-3.shift-type .float-text-area {
+  margin-left: -2%;
+  margin-bottom: -15% !important;
+  background-color: var(--LtGray_T70_A50);
+  padding: 4rem;
+}
+
+/* ========== cstm-pat-3 end ==========　*/
+
+/* ========== cstm-pat-4 start ==========　*/
+/* cstm-pat-4 */
+/* Category リスト */
+
+/* More btn */
+.cstm-pat-4 p.cstm-more-btn {
+  padding-right: 0em;
+}
+
+/* ========== cstm-pat-4 end ==========　*/
+
+/* ========== cstm-pat-5 start ==========　*/
+/* cstm-pat-5 */
+/* 人気ランキング */
+
+.cstm-pat-5 .popular-list-box.cstm-ect-vertical-card .popular-entry-cards .a-wrap {
+  line-height: 1.6;
+}
+
+.cstm-pat-5 .popular-list-box.cstm-ect-vertical-card .popular-entry-cards {
+  display: grid;
+  place-content: center;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  -moz-column-gap: 4px;
+  column-gap: 4px;
+  row-gap: 4px;
+}
+
+/* 人気記事ウィジェット　指定のクラス名のときのみ　投稿日・更新日を表示 */
+.cstm-pat-5 .popular-entry-card.widget-entry-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cstm-pat-5 .popular-entry-card-thumb.widget-entry-card-thumb {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.cstm-pat-5 .popular-entry-card.widget-entry-card .popular-entry-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  height: 100%;
+  padding: 0.6em 0;
+}
+
+.cstm-pat-5 .popular-entry-card-title.widget-entry-card-title.card-title {
+  -webkit-line-clamp: unset;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.cstm-pat-5 .popular-entry-card-date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: .7em;
+  color: var(--skin-grayish-site-sub-color);
+  /* margin-top: auto; */
+}
+
+.cstm-pat-5 .popular-entry-card-post-date.widget-entry-card-post-date.post-date,
+.cstm-pat-5 .popular-entry-card-update-date.widget-entry-card-update-date.post-update {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  font-size: 0.9em;
+  position: relative;
+}
+
+
+.cstm-pat-5 .popular-entry-card-post-date.widget-entry-card-post-date.post-date::before,
+.cstm-pat-5 .popular-entry-card-update-date.widget-entry-card-update-date.post-update::before {
+  display: inline-block;
+  content: "\f017";
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: fit-content;
+  height: auto;
+  margin-right: 3px;
+}
+
+.cstm-pat-5 .popular-entry-card-update-date.widget-entry-card-update-date.post-update::before {
+  font-weight: 900;
+  content: "\f1da";
+}
+
+
+/* .shift-mode popular-entry-cardsの2つ目の子要素にmargin-top付けたい 以降繰り返し*/
+.cstm-pat-5 .popular-list-box.cstm-ect-vertical-card.shift-mode .popular-entry-cards .a-wrap:nth-child(3n+2) {
+  margin-top: 2rem;
+}
+
+/* .shift-mode popular-entry-cardsの3つ目の子要素にmargin-top付けたい 以降繰り返し*/
+.cstm-pat-5 .popular-list-box.cstm-ect-vertical-card.shift-mode .popular-entry-cards .a-wrap:nth-child(3n) {
+  margin-top: 4rem;
+}
+
+
+/* ========== cstm-pat-5 end ==========　*/
+
+/* ========== cstm-pat-6 start ==========　*/
+/* cstm-pat-6 */
+/* お問い合わせとSNS */
+
+/* contact */
+.cstm-pat-6 .cstm-contact-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cstm-pat-6 .cstm-contact-btn a {
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  width: 50%;
+  border: solid 1px var(--skin-grayish-site-name-txt);
+  position: relative;
+  padding: 1.4rem 0rem;
+  text-decoration: none;
+  transition: background-color .5s, border .5s;
+}
+
+/* aをhoverしたら背景の色とborderの色を変える*/
+.cstm-pat-6 .cstm-contact-btn a:hover {
+  background-color: var(--skin-grayish-site-sub-color);
+  border: solid 1px var(--skin-grayish-site-sub-color);
+}
+
+.cstm-pat-6 .cstm-contact-btn a::before {
+  display: block;
+  content: "\f0e0";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1em;
+  font-weight: 900;
+  width: fit-content;
+  padding-right: 1em;
+}
+
+.cstm-pat-6 .cstm-contact-btn a::after {
+  display: block;
+  content: "";
+  background-color: var(--skin-grayish-site-name-txt);
+  width: 2ch;
+  height: 1px;
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  rotate: 90deg;
+  translate: 0 0;
+  transition: translate .5s;
+}
+
+/* aをhoverしたらafterを縦方向に下げる*/
+.cstm-pat-6 .cstm-contact-btn a:hover::after {
+  translate: 0 20px;
+
+}
+
+
+/* ========== cstm-pat-6 end ==========　*/
+
+/* ========== cstm-pat-7 start ==========　*/
+/* cstm-pat-7 */
+/* PickUp ナビカード */
+
+/* PickUp ナビカード Large type*/
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 2rem;
+}
+
+/* navi-entry-cardsの偶数番目の子要素は向きを反対にする */
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card {
+  flex-direction: row-reverse;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link::before {
+  content: "";
+  background-color: var(--LtGray_T0);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link:last-child::before {
+  content: none;
+}
+
+
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.6;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-thumb {
+  width: 50%;
+  flex-shrink: 1;
+  margin-top: 0;
+}
+
+/* リボンのスタイル変更 */
+/* cstm-pat-7　cstm-navi-card-lglistでテーマのリボンスタイルを使うとき */
+.cstm-pat-7 .cstm-navi-card-lglist:not(.cstm-navi-ribbon) .navi-entry-card-link .navi-entry-card .ribbon-top-left {
+  top: -6px;
+  left: -9px;
+}
+
+/* リボンの色1：おすすめ */
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-1 span,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-1 span {
+  background-color: var(--Blk_Pink_T0);
+}
+
+/* リボンの色2：新着 */
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-2 span,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-2 span {
+  background-color: var(--LtBlue_T0);
+}
+
+/* リボンの色3：注目 */
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-3 span,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-3 span {
+  background-color: var(--Blk_Beige_T0);
+}
+
+/* リボンの色4：必見 */
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-4 span,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-4 span {
+  background-color: var(--Blk_Green_T0);
+}
+
+/* リボンの色5：お得 */
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-5 span,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-5 span {
+  background-color: var(--Blk_Pink_T0);
+}
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left {
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+  color: var(--LtGray_S50);
+  font-family: var(--skin-grayish-style-font);
+  font-size: 14px;
+  box-shadow: unset;
+  text-shadow: unset;
+  width: 140px;
+  padding: 10px 0;
+  right: -44px;
+  top: 16px;
+  transform: none;
+  --r: .5em;
+  clip-path: polygon(-100vw 0, 100% 0, calc(100% - var(--r)) 50%, 100% 100%, -100vw 100%);
+}
+
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::before,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::after,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::before,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::after {
+  display: none;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content {
+  width: 48%;
+  margin-left: 0;
+  padding: 2rem;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: double 3px var(--LtGray_T0);
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-snippet {
+  font-size: 16px;
+}
+
+/* navi-entry-cardsの2つ目の子要素のリボンの位置を逆側にする */
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left {
+  right: 0;
+  left: unset;
+}
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
+  clip-path: polygon(100vw 0, 0 0, var(--r) 50%, 0 100%, 100vw 100%);
+  right: -16px;
+}
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+  font-size: 10px;
+  width: 90px;
+  padding: 6px 0;
+  right: -5px;
+  top: 8px;
+}
+
+/* 枠線付きが選択されたときの位置調整 */
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist:has(.border-square) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+  right: -4px;
+  top: -6px;
+}
+
+
+/* Pickup 2列配置 col-mode, 3列配置 col-3-mode, 4列配置 col-4-mode*/
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-cards {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  column-gap: 10px;
+  row-gap: 1rem;
+}
+
+/* Pickup 3列配置 col-3-mode*/
+.cstm-pat-7 .cstm-navi-card-lglist.col-3-mode .navi-entry-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Pickup 4列配置 col-4-mode*/
+.cstm-pat-7 .cstm-navi-card-lglist.col-4-mode .navi-entry-cards {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  row-gap: 0.5rem;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  row-gap: 0.5rem;
+
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-thumb {
+  width: 100%;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-content {
+  display: contents;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card {
+  flex-direction: column;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
+  font-size: 18px;
+  margin-bottom: 0rem;
+  padding-bottom: 0.5rem;
+  border-bottom: double 3px var(--LtGray_T0);
+}
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+  color: var(--LtGray_S50);
+  font-family: var(--skin-grayish-style-font);
+  font-size: 14px;
+  box-shadow: unset;
+  text-shadow: unset;
+  width: 140px;
+  padding: 10px 0;
+  right: -50px;
+  top: 12px;
+  transform: none;
+  --r: .5em;
+  clip-path: polygon(-100vw 0, 100% 0, calc(100% - var(--r)) 50%, 100% 100%, -100vw 100%);
+}
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left {
+  right: unset;
+  left: 0;
+}
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
+  clip-path: polygon(-100vw 0, 100% 0, calc(100% - var(--r)) 50%, 100% 100%, -100vw 100%);
+  right: -50px;
+}
+
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link::before {
+  display: none;
+}
+
+/* ========== cstm-pat-7 end ==========　*/
+
+
+/*1023px以下*/
+@media screen and (max-width: 1023px) {
+
+  /* ========== common start ==========　*/
+  /* More btn */
+  p.cstm-more-btn {
+    padding-right: 1em;
+  }
+
+  p.cstm-more-btn a::before {
+    width: 2em;
+  }
+
+  /* H2見出しのしたのテキストのスタイル */
+  .article h2.cstm-head+.cstm-sub-text.leftype {
+    margin-inline: auto;
+  }
+
+  .article h2.cstm-head+.cstm-sub-text.leftype::before {
+    right: 0;
+    margin: auto;
+  }
+
+  /* ========== common end ==========　*/
+
+  /* ========== cstm-pat-common start ==========　*/
+  /* coverブロック内の上下の余白 */
+  /* clip-pathなし */
+  :where(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7)>.wp-block-cover__inner-container {
+    padding-top: 3rem;
+  }
+
+  /* ========== cstm-pat-common end ==========　*/
+
+
+  /* ========== cstm-pat-1 start ==========　*/
+  /* cstm-pat-1 */
+  /* .cstm-pat-1>.wp-block-cover__inner-container {
+    padding-top: 3rem;
+  } */
+
+
+  .cstm-pat-1>.wp-block-cover__inner-container .wp-block-columns {
+    flex-direction: column;
+  }
+
+  .cstm-pat-1>.wp-block-cover__inner-container h2.cstm-head {
+    text-align: center;
+    padding-right: 0px;
+  }
+
+
+  .cstm-pat-1 .wp-block-column .info-list-box.block-box {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .cstm-pat-1 .is-style-divider-line .info-list-item {
+    border-bottom: solid 1px var(--LtGray_T0);
+  }
+
+  /* 背景画像ありのダークモード */
+  .cstm-pat-1.backimg-pat .wp-block-column .info-list-box.block-box {
+    border-left: none;
+    padding-left: 0;
+
+  }
+
+  /* ========== cstm-pat-1 end ==========　*/
+
+  /* ========== cstm-pat-2 start ==========　*/
+  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .new-entry-card-title {
+    font-size: 16px;
+  }
+
+  /* ========== cstm-pat-2 end ==========　*/
+
+
+  /* ========== cstm-pat-3 start ==========　*/
+  /* テキストエリアずらし横並びタイプ */
+  .cstm-pat-3.shift-type>.wp-block-cover__inner-container {
+    padding-bottom: 6rem;
+  }
+
+  .cstm-pat-3>.wp-block-cover__inner-container .wp-block-columns {
+    flex-direction: column;
+  }
+
+  .cstm-pat-3>.wp-block-cover__inner-container h2.cstm-head {
+    text-align: center;
+  }
+
+  /* 画像を画面幅にする */
+  .cstm-pat-3>.wp-block-cover__inner-container .wp-block-image {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+  }
+
+  /* 横から縦に変化したpatはH2を上に並べ替え basic-type ,shift-typeは含まない*/
+  .cstm-pat-3:not(.basic-type, .shift-type)>.wp-block-cover__inner-container .wp-block-columns {
+    display: grid;
+    place-content: center;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    width: 100%;
+    row-gap: unset;
+  }
+
+  .cstm-pat-3:not(.basic-type, .shift-type)>.wp-block-cover__inner-container .wp-block-columns>.wp-block-column:has(.cstm-head) {
+    display: contents;
+  }
+
+  .cstm-pat-3:not(.basic-type, .shift-type)>.wp-block-cover__inner-container h2.cstm-head {
+    order: 1;
+  }
+
+  .cstm-pat-3:not(.basic-type, .shift-type)>.wp-block-cover__inner-container .cstm-sub-text {
+    order: 2;
+  }
+
+  .cstm-pat-3:not(.basic-type, .shift-type)>.wp-block-cover__inner-container .wp-block-columns>.wp-block-column:has(.wp-block-image) {
+    order: 3;
+    margin-bottom: 2rem;
+  }
+
+  .cstm-pat-3:not(.basic-type, .shift-type)>.wp-block-cover__inner-container .cstm-main-text {
+    order: 4;
+  }
+
+  .cstm-pat-3:not(.basic-type, .shift-type)>.wp-block-cover__inner-container p.cstm-more-btn {
+    order: 5;
+  }
+
+  /* テキストエリアずらし横並びタイプ */
+  .cstm-pat-3.shift-type .float-text-area {
+    margin-left: 0;
+    margin-bottom: 0 !important;
+    padding: 4rem;
+    margin-top: -10%;
+  }
+
+  /* ========== cstm-pat-3 end ==========　*/
+
+  /* ========== cstm-pat-4 start ==========　*/
+  .cstm-pat-4>.wp-block-cover__inner-container .wp-block-columns {
+    flex-direction: column;
+    row-gap: 6rem;
+  }
+
+  .cstm-pat-4 p.cstm-more-btn {
+    padding-right: 1em;
+  }
+
+  /* ========== cstm-pat-4 end ==========　*/
+
+}
+
+
+/*834px以下*/
+@media screen and (max-width: 834px) {
+
+  /* ========== common start ==========　*/
+  /* フロントページのメインコンテンツ上下の余白対策 */
+  .body.skin-grayish.front-top-page :where(.main, div.sidebar) {
+    padding: 0px 16px;
+    margin: 0px 0;
+    border-width: 0;
+  }
+
+  .body.skin-grayish.front-top-page .content .main {
+    padding: 0px 16px 0px 16px;
+  }
+
+  /* ========== common end ==========　*/
+
+  /* ========== cstm-pat-2 start ==========　*/
+  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap {
+    max-width: unset;
+  }
+
+
+  /* ========== cstm-pat-2 end ==========　*/
+
+  /* ========== cstm-pat-5 start ==========　*/
+  .cstm-pat-5 .popular-list-box.cstm-ect-vertical-card .popular-entry-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .cstm-pat-5 .popular-list-box.cstm-ect-vertical-card .popular-entry-cards .a-wrap {
+    max-width: unset;
+  }
+
+  /* .shift-mode クリア*/
+  .cstm-pat-5 .popular-list-box.cstm-ect-vertical-card.shift-mode .popular-entry-cards .a-wrap:nth-child(3n+2) {
+    margin-top: 0rem;
+  }
+
+  /* .shift-mode クリア*/
+  .cstm-pat-5 .popular-list-box.cstm-ect-vertical-card.shift-mode .popular-entry-cards .a-wrap:nth-child(3n) {
+    margin-top: 0rem;
+  }
+
+  /* ========== cstm-pat-5 end ==========　*/
+
+  /* ========== cstm-pat-6 start ==========　*/
+  .cstm-pat-6 .cstm-contact-btn {
+    padding: 1rem !important;
+  }
+
+  .cstm-pat-6 .cstm-contact-btn a {
+    width: 100%;
+  }
+
+  /* ========== cstm-pat-6 end ==========　*/
+
+  /* ========== cstm-pat-7 start ==========　*/
+  /* Pickup 横並びで交互にカード入れ替え */
+  .cstm-pat-7 .cstm-navi-card-lglist:not(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+
+  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-thumb,
+  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content {
+    width: 100%;
+  }
+
+  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content {
+    padding: 0;
+  }
+
+  .cstm-pat-7 .cstm-navi-card-lglist:not(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
+    margin-bottom: 1rem;
+  }
+
+  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card {
+    flex-direction: column;
+  }
+
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left {
+    right: unset;
+    left: 0;
+  }
+
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
+    clip-path: polygon(-100vw 0, 100% 0, calc(100% - var(--r)) 50%, 100% 100%, -100vw 100%);
+    right: -50px;
+  }
+
+  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link::before {
+    content: none;
+  }
+
+  /* Pickup 3列配置 col-3-mode 4列配置 col-4-mode*/
+  .cstm-pat-7 .cstm-navi-card-lglist:is(.col-3-mode, .col-4-mode) .navi-entry-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* ========== cstm-pat-7 end ==========　*/
+
+
+}
+
+/*480px以下*/
+@media screen and (max-width: 480px) {
+
+  /* ========== cstm-pat-common start ==========　*/
+  /* サンプルパターン共通 */
+  :is(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7)>.wp-block-cover__inner-container h2.cstm-head {
+    font-size: 48px;
+    padding: 0;
+  }
+
+  /* ========== cstm-pat-common end ==========　*/
+
+  /* ========== cstm-pat-1 start ==========　*/
+
+  .cstm-pat-1 .is-style-divider-line.info-list {
+    padding: 0 8px;
+  }
+
+  .cstm-pat-1 .is-style-divider-line.info-list .info-list-item-meta .info-list-item-date {
+    display: block;
+  }
+
+  .cstm-pat-1 .is-style-divider-line.info-list .info-list-item-meta,
+  .cstm-pat-1 .is-style-divider-line.info-list .info-list-item-meta .info-list-item-categorys,
+  .cstm-pat-1 .is-style-divider-line.info-list .info-list-item-meta .info-list-item-categorys span {
+    display: flex;
+  }
+
+  .cstm-pat-1 .is-style-divider-line.info-list .info-list-item-meta {
+    flex-direction: column;
+    row-gap: 0.4em;
+  }
+
+  .cstm-pat-1 .is-style-divider-line.info-list .info-list-item-meta .info-list-item-categorys {
+    flex-wrap: wrap;
+    row-gap: 0.4em;
+  }
+
+  /* ========== cstm-pat-1 end ==========　*/
+
+  /* ========== cstm-pat-2 start ==========　*/
+
+  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* ========== cstm-pat-2 end ==========　*/
+
+  /* ========== cstm-pat-3 start ==========　*/
+
+  .cstm-pat-3>.wp-block-cover__inner-container,
+  .cstm-pat-3.pat3-back-gradation>.wp-block-cover__inner-container {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  /* テキストエリアずらし横並びタイプ */
+  .cstm-pat-3.shift-type .float-text-area {
+    padding: 4rem 2rem;
+    margin-top: -15%;
+  }
+
+  /* ========== cstm-pat-3 end ==========　*/
+
+  /* ========== cstm-pat-4 start ==========　*/
+  /* ========== cstm-pat-4 end ==========　*/
+
+  /* ========== cstm-pat-5 start ==========　*/
+  /* ========== cstm-pat-5 end ==========　*/
+
+  /* ========== cstm-pat-6 start ==========　*/
+  /* ========== cstm-pat-6 end ==========　*/
+
+  /* ========== cstm-pat-7 start ==========　*/
+  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
+    font-size: 16px;
+  }
+
+  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-snippet {
+    font-size: 14px;
+  }
+
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
+    font-size: 12px;
+    width: 100px;
+    top: 12px;
+    right: -8px;
+  }
+
+  /* Pickup 2列配置 col-mode*/
+  .cstm-pat-7 .cstm-navi-card-lglist.col-mode .navi-entry-cards,
+  .cstm-pat-7 .cstm-navi-card-lglist.col-3-mode .navi-entry-cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+
+  .cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
+    font-size: 16px;
+  }
+
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-mode, .col-3-mode) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-mode, .col-3-mode) .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
+    font-size: 12px;
+    width: 100px;
+    top: 12px;
+    right: -8px;
+  }
+
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist.col-4-mode .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist.col-4-mode .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
+    font-size: 10px;
+    width: 90px;
+    padding: 6px 0;
+    right: -5px;
+    top: 5px;
+  }
+
+  .cstm-pat-7 .cstm-navi-card-lglist.col-4-mode .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-snippet {
+    font-size: 12px;
+  }
+
+  /* ========== cstm-pat-7 end ==========　*/
+
+
+}

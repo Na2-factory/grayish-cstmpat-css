@@ -1,0 +1,4 @@
+# grayish_cstm_css_plugin
+WordPressテーマCocoonのスキンgrayishのプラグイン
+
+1カラムで作るページに使用可能なパターンとセットのカスタムCSSです。
