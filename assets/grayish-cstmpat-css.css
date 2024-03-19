@@ -201,6 +201,11 @@ p.cstm-more-btn a:hover::before {
   z-index: 1;
 }
 
+/* for safari */
+* {
+  min-height: 0vw;
+}
+
 /* ========== common end ==========　*/
 
 /* ========== cstm-pat-common start ==========　*/
@@ -746,18 +751,19 @@ p.cstm-more-btn a:hover::before {
 .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content {
   width: 48%;
   margin-left: 0;
-  padding: 2rem;
+  padding: 0 1.2rem;
 }
 
 .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
-  font-size: 18px;
-  margin-bottom: 1rem;
+  font-size: clamp(1rem, 0.8636rem + 0.4545vw, 1.25rem);
   padding-bottom: 1rem;
-  border-bottom: double 3px var(--LtGray_T0);
 }
 
 .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-snippet {
+  display: block;
+  overflow: visible;
   font-size: 16px;
+  margin-top: 0;
 }
 
 /* navi-entry-cardsの2つ目の子要素のリボンの位置を逆側にする */
@@ -794,6 +800,12 @@ p.cstm-more-btn a:hover::before {
   width: 100%;
   column-gap: 10px;
   row-gap: 1rem;
+}
+
+/* Pickup 3列配置 col-3-mode,4列配置 col-4-modeの説明分はPCから行数で制限あり　*/
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-snippet {
+  display: -webkit-box;
+  overflow: hidden;
 }
 
 /* Pickup 3列配置 col-3-mode*/
@@ -837,11 +849,12 @@ p.cstm-more-btn a:hover::before {
   flex-direction: column;
 }
 
+.cstm-pat-7 .cstm-navi-card-lglist:where(.col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
+  font-size: clamp(1rem, 0.9318rem + 0.2273vw, 1.125rem);
+}
+
 .cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
-  font-size: 18px;
-  margin-bottom: 0rem;
-  padding-bottom: 0.5rem;
-  border-bottom: double 3px var(--LtGray_T0);
+  padding-bottom: 0rem;
 }
 
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
@@ -1031,6 +1044,16 @@ p.cstm-more-btn a:hover::before {
 
   /* ========== cstm-pat-4 end ==========　*/
 
+  /* ========== cstm-pat-7 start ==========　*/
+  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-snippet {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: clamp(0.75rem, 0.6395rem + 0.3683vw, 0.875rem);
+  }
+
+  /* ========== cstm-pat-7 end ==========　*/
+
+
 }
 
 
@@ -1112,9 +1135,9 @@ p.cstm-more-btn a:hover::before {
     padding: 0;
   }
 
-  .cstm-pat-7 .cstm-navi-card-lglist:not(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
+  /* .cstm-pat-7 .cstm-navi-card-lglist:not(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
     margin-bottom: 1rem;
-  }
+  } */
 
   .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card {
     flex-direction: column;
@@ -1219,13 +1242,6 @@ p.cstm-more-btn a:hover::before {
   /* ========== cstm-pat-6 end ==========　*/
 
   /* ========== cstm-pat-7 start ==========　*/
-  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
-    font-size: 16px;
-  }
-
-  .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-snippet {
-    font-size: 14px;
-  }
 
   .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
   .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
