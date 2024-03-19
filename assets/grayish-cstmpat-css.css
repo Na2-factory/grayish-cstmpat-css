@@ -755,6 +755,8 @@ p.cstm-more-btn a:hover::before {
 }
 
 .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .navi-entry-card-content .navi-entry-card-title {
+  display: block;
+  overflow: visible;
   font-size: clamp(1rem, 0.8636rem + 0.4545vw, 1.25rem);
   padding-bottom: 1rem;
 }
@@ -823,7 +825,7 @@ p.cstm-more-btn a:hover::before {
   grid-template-rows: subgrid;
   grid-template-columns: 1fr;
   grid-row: span 3;
-  row-gap: 0.5rem;
+  row-gap: 1rem;
 }
 
 .cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card {
