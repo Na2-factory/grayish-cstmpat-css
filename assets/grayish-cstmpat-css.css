@@ -20,7 +20,7 @@
 }
 
 .body.skin-grayish.front-top-page :where(.breadcrumb.sbp-main-before+.content, .breadcrumb.pbp-main-before+.content) {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .body.skin-grayish.front-top-page .content {
@@ -1066,12 +1066,12 @@ p.cstm-more-btn a:hover::before {
   /* フロントページのメインコンテンツ上下の余白対策 */
   .body.skin-grayish.front-top-page :where(.main, div.sidebar) {
     padding: 0px 16px;
-    margin: 0px 0;
+    margin: 0;
     border-width: 0;
   }
 
   .body.skin-grayish.front-top-page .content .main {
-    padding: 0px 16px 0px 16px;
+    padding: 0px 16px;
   }
 
   /* ========== common end ==========　*/
