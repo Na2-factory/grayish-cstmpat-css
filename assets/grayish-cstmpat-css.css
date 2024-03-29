@@ -202,9 +202,9 @@ p.cstm-more-btn a:hover::before {
 }
 
 /* for safari */
-* {
+/* * {
   min-height: 0vw;
-}
+} */
 
 /* ========== common end ==========　*/
 
