@@ -2,7 +2,7 @@
 /*
 Plugin Name: grayish-cstmpat-css
 Description: grayishの1カラム用サンプルパターン向けCSSを追加するプラグイン
-Version: 1.0.0
+Version: 1.0.1
 Author: Na2factory
 Author URI: https://na2-factory.com/
 License: GNU General Public License
@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 if (!defined('ABSPATH')) exit;
 
 if (!defined('GRY_CSTMPAT_PLUGIN_VERSION')) {
-	define('GRY_CSTMPAT_PLUGIN_VERSION', '1.0.0');
+	define('GRY_CSTMPAT_PLUGIN_VERSION', '1.0.1');
 }
 
 if (!defined('GRY_CSTMPAT_PLUGIN_PATH')) {
