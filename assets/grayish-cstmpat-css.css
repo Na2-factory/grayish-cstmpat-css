@@ -257,7 +257,6 @@ p.cstm-more-btn a:hover::before {
 
 /* ========== clip-path end ==========　*/
 
-
 /* coverブロック内の上下の余白 */
 /* clip-pathなし */
 :where(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7)>.wp-block-cover__inner-container {
@@ -280,6 +279,44 @@ p.cstm-more-btn a:hover::before {
 }
 
 /* ========== cstm-pat-common end ==========　*/
+
+/* ========== circle & wave path start ==========　*/
+/* v1.0.2 add */
+:where(.cstm-blk-path-lower-cir, .cstm-blk-path-upper-cir) svg {
+  display: block;
+  fill: #f6f6f6;
+  width: 100%;
+  height: auto;
+}
+
+:where(.cstm-blk-path-lower-wave, .cstm-blk-path-upper-wave) svg {
+  display: block;
+  fill: #f6f6f6;
+  width: 100%;
+  height: auto;
+}
+
+.cstm-blk-path-upper-cir,
+.cstm-blk-path-upper-wave {
+  margin-bottom: 0 !important;
+}
+
+/* .cstm-blk-path-upper-waveの次のカバーブロック内の上の余白を半分に */
+/* cstm-blk-path-lower-waveの次のカバーブロック内の上の余白を半分に */
+.cstm-blk-path-upper-wave+.wp-block-cover>.wp-block-cover__inner-container,
+.cstm-blk-path-lower-wave+.wp-block-cover>.wp-block-cover__inner-container {
+  padding-top: 3rem;
+}
+
+.cstm-blk-path-upper-cir+.wp-block-cover>.wp-block-cover__inner-container,
+.cstm-blk-path-lower-cir+.wp-block-cover>.wp-block-cover__inner-container {
+  padding-top: 0rem;
+}
+
+
+
+/* ========== circle & wave path end ==========　*/
+
 
 /* ========== cstm-pat-1 start ==========　*/
 /* cstm-pat-1 News作例1のブロック */
@@ -924,6 +961,15 @@ p.cstm-more-btn a:hover::before {
   }
 
   /* ========== cstm-pat-common end ==========　*/
+
+  /* ========== circle & wave path start ==========　*/
+  .cstm-blk-path-upper-cir+.wp-block-cover>.wp-block-cover__inner-container,
+  .cstm-blk-path-lower-cir+.wp-block-cover>.wp-block-cover__inner-container {
+    padding-top: 3rem;
+  }
+
+  /* ========== circle & wave path end ==========　*/
+
 
 
   /* ========== cstm-pat-1 start ==========　*/
