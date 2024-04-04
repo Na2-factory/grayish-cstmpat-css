@@ -286,14 +286,14 @@ p.cstm-more-btn a:hover::before {
   display: block;
   fill: #f6f6f6;
   width: 100%;
-  height: auto;
+  height: 6vmin;
 }
 
 :where(.cstm-blk-path-lower-wave, .cstm-blk-path-upper-wave) svg {
   display: block;
   fill: #f6f6f6;
   width: 100%;
-  height: auto;
+  height: 7vmin;
 }
 
 .cstm-blk-path-upper-cir,
@@ -301,8 +301,7 @@ p.cstm-more-btn a:hover::before {
   margin-bottom: 0 !important;
 }
 
-/* .cstm-blk-path-upper-waveの次のカバーブロック内の上の余白を半分に */
-/* cstm-blk-path-lower-waveの次のカバーブロック内の上の余白を半分に */
+/* .cstm-blk-path-upper-wave,cstm-blk-path-lower-waveの次のカバーブロック内の上の余白を半分に */
 .cstm-blk-path-upper-wave+.wp-block-cover>.wp-block-cover__inner-container,
 .cstm-blk-path-lower-wave+.wp-block-cover>.wp-block-cover__inner-container {
   padding-top: 3rem;
@@ -313,10 +312,7 @@ p.cstm-more-btn a:hover::before {
   padding-top: 0rem;
 }
 
-
-
 /* ========== circle & wave path end ==========　*/
-
 
 /* ========== cstm-pat-1 start ==========　*/
 /* cstm-pat-1 News作例1のブロック */
