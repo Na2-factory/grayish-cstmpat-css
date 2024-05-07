@@ -312,6 +312,14 @@ p.cstm-more-btn a:hover::before {
   padding-top: 0rem;
 }
 
+:where(.cstm-blk-path-upper-cir, .cstm-blk-path-upper-wave) {
+  transform: translateY(1px);
+}
+
+:where(.cstm-blk-path-lower-cir, .cstm-blk-path-lower-wave) {
+  transform: translateY(-1px);
+}
+
 /* ========== circle & wave path end ==========　*/
 
 /* ========== circle & wave cover-blk-ver start ==========　*/
@@ -319,6 +327,14 @@ p.cstm-more-btn a:hover::before {
 :where(.cstm-cover-path-lower-cir, .cstm-cover-path-upper-cir, .cstm-cover-path-lower-wave, .cstm-cover-path-upper-wave) {
   padding: 0 !important;
   min-height: unset !important;
+}
+
+:where(.svg-upper-cir, .svg-upper-wave) {
+  transform: translateY(1px);
+}
+
+:where(.svg-lower-cir, .svg-lower-wave) {
+  transform: translateY(-1px);
 }
 
 :where(.cstm-cover-path-lower-cir, .cstm-cover-path-upper-cir) svg {
