@@ -314,6 +314,43 @@ p.cstm-more-btn a:hover::before {
 
 /* ========== circle & wave path end ==========　*/
 
+/* ========== circle & wave cover-blk-ver start ==========　*/
+/* v1.0.3 add */
+:where(.cstm-cover-path-lower-cir, .cstm-cover-path-upper-cir, .cstm-cover-path-lower-wave, .cstm-cover-path-upper-wave) {
+  padding: 0 !important;
+  min-height: unset !important;
+}
+
+:where(.cstm-cover-path-lower-cir, .cstm-cover-path-upper-cir) svg {
+  display: block;
+  fill: currentColor;
+  width: 100%;
+  height: 6vmin;
+}
+
+:where(.cstm-cover-path-lower-wave, .cstm-cover-path-upper-wave) svg {
+  display: block;
+  fill: currentColor;
+  width: 100%;
+  height: 7vmin;
+}
+
+.cstm-cover-path-upper-cir,
+.cstm-cover-path-upper-wave {
+  margin-bottom: 0 !important;
+}
+
+/* .cstm-cover-path-upper-wave,.cstm-cover-path-lower-wave,
+.cstm-cover-path-upper-cir, .cstm-cover-path-lower-cirの次のカバーブロック内の上の余白を半分に */
+.cstm-cover-path-upper-wave+.wp-block-cover>.wp-block-cover__inner-container,
+.cstm-cover-path-lower-wave+.wp-block-cover>.wp-block-cover__inner-container,
+.cstm-cover-path-upper-cir+.wp-block-cover>.wp-block-cover__inner-container,
+.cstm-cover-path-lower-cir+.wp-block-cover>.wp-block-cover__inner-container {
+  padding-top: 3rem;
+}
+
+/* ========== circle & wave cover-blk-ver end ==========　*/
+
 /* ========== cstm-pat-1 start ==========　*/
 /* cstm-pat-1 News作例1のブロック */
 
@@ -965,7 +1002,6 @@ p.cstm-more-btn a:hover::before {
   }
 
   /* ========== circle & wave path end ==========　*/
-
 
 
   /* ========== cstm-pat-1 start ==========　*/
