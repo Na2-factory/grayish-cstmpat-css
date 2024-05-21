@@ -21,11 +21,6 @@
   padding-bottom: 0;
 }
 
-/* そもそも不要なCSS */
-/* .body.skin-grayish.front-top-page :where(.breadcrumb.sbp-main-before+.content, .breadcrumb.pbp-main-before+.content) {
-  margin-top: 0;
-} */
-
 /* サイト型のみ　ブログ型では無効 */
 .body.skin-grayish.front-top-page:not(.blog) .content {
   margin-top: 0;
@@ -43,6 +38,7 @@
 }
 
 /* フロントページのメインコンテンツ上下の余白対策 end*/
+
 
 /* 画像ブロックは以下で画面幅に */
 .cstm-blk-fullwide {
@@ -1163,22 +1159,6 @@ p.cstm-more-btn a:hover::before {
 
 /*834px以下*/
 @media screen and (max-width: 834px) {
-
-  /* ========== common start ==========　*/
-  /* フロントページのメインコンテンツ上下の余白対策 */
-  /* 不要なCSS */
-  /* .body.skin-grayish.front-top-page :where(.main, div.sidebar) {
-    padding: 0px 16px;
-    margin: 0;
-    border-width: 0;
-  } */
-
-  /* これも不要　*/
-  /* .body.skin-grayish.front-top-page:not(.blog) .content .main {
-    padding: 0px 16px;
-  } */
-
-  /* ========== common end ==========　*/
 
   /* ========== cstm-pat-2 start ==========　*/
   .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards {
