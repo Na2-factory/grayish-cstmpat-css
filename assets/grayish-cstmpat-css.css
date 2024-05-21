@@ -3,35 +3,41 @@
 /* grayishの1カラム向け　サンプルコード用CSS */
 
 /* ========== common start ==========　*/
-/* フロントページのメインコンテンツ上下の余白対策 */
+/* サイト型　フロントページのメインコンテンツ上下の余白対策 */
 .body.skin-grayish.front-top-page .breadcrumb,
 .body.skin-grayish.front-top-page .article-header,
 .body.skin-grayish.front-top-page .pr-label-s {
   display: none;
 }
 
-.body.skin-grayish.front-top-page :where(.content-top, .content-bottom) {
+/* サイト型のみ　ブログ型では無効 */
+.body.skin-grayish.front-top-page:not(.blog) :where(.content-top, .content-bottom) {
   margin: 0;
 }
 
-.body.skin-grayish.front-top-page .content .main {
+/* サイト型のみ　ブログ型では無効 */
+.body.skin-grayish.front-top-page:not(.blog) .content .main {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.body.skin-grayish.front-top-page :where(.breadcrumb.sbp-main-before+.content, .breadcrumb.pbp-main-before+.content) {
+/* そもそも不要なCSS */
+/* .body.skin-grayish.front-top-page :where(.breadcrumb.sbp-main-before+.content, .breadcrumb.pbp-main-before+.content) {
+  margin-top: 0;
+} */
+
+/* サイト型のみ　ブログ型では無効 */
+.body.skin-grayish.front-top-page:not(.blog) .content {
   margin-top: 0;
 }
 
-.body.skin-grayish.front-top-page .content {
-  margin-top: 0;
-}
-
+/* サイト型のみ */
 .body.skin-grayish.front-top-page .entry-content {
   margin-top: 0;
   margin-bottom: 0;
 }
 
+/* サイト型のみ */
 .body.skin-grayish.front-top-page .article {
   margin-bottom: 0;
 }
@@ -1160,15 +1166,17 @@ p.cstm-more-btn a:hover::before {
 
   /* ========== common start ==========　*/
   /* フロントページのメインコンテンツ上下の余白対策 */
-  .body.skin-grayish.front-top-page :where(.main, div.sidebar) {
+  /* 不要なCSS */
+  /* .body.skin-grayish.front-top-page :where(.main, div.sidebar) {
     padding: 0px 16px;
     margin: 0;
     border-width: 0;
-  }
+  } */
 
-  .body.skin-grayish.front-top-page .content .main {
+  /* これも不要　*/
+  /* .body.skin-grayish.front-top-page:not(.blog) .content .main {
     padding: 0px 16px;
-  }
+  } */
 
   /* ========== common end ==========　*/
 
