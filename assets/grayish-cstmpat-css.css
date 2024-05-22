@@ -10,11 +10,6 @@
   display: none;
 }
 
-/* サイト型のみ　ブログ型では無効 -> 不要と判断、削除*/
-/* .body.skin-grayish.front-top-page:not(.blog) :where(.content-top, .content-bottom) {
-  margin: 0;
-} */
-
 /* サイト型のみ　ブログ型では無効 */
 .body.skin-grayish.front-top-page:not(.blog) .content .main {
   padding-top: 0;
@@ -770,6 +765,11 @@ p.cstm-more-btn a:hover::before {
   margin-top: 0;
 }
 
+/* PickUp ナビカード サムネイル画像が荒い対策版 改良パターンに--large-thumb追加*/
+.cstm-pat-7 .cstm-navi-card-lglist.--large-thumb .navi-entry-card-link {
+  max-width: unset;
+}
+
 /* リボンのスタイル変更 */
 /* cstm-pat-7　cstm-navi-card-lglistでテーマのリボンスタイルを使うとき */
 .cstm-pat-7 .cstm-navi-card-lglist:not(.cstm-navi-ribbon) .navi-entry-card-link .navi-entry-card .ribbon-top-left {
@@ -949,7 +949,8 @@ p.cstm-more-btn a:hover::before {
   padding-bottom: 0rem;
 }
 
-.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist.col-mode .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
   color: var(--LtGray_S50);
   font-family: var(--skin-grayish-style-font);
   font-size: 14px;
@@ -977,6 +978,20 @@ p.cstm-more-btn a:hover::before {
 .cstm-pat-7 .cstm-navi-card-lglist:where(.col-mode, .col-3-mode, .col-4-mode) .navi-entry-card-link::before {
   display: none;
 }
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+  font-size: 12px;
+  width: 110px;
+  padding: 10px 0;
+  right: -20px;
+  top: 10px;
+}
+
+.cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-3-mode, .col-4-mode) .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
+  clip-path: polygon(-100vw 0, 100% 0, calc(100% - var(--r)) 50%, 100% 100%, -100vw 100%);
+  right: -20px;
+}
+
 
 /* ========== cstm-pat-7 end ==========　*/
 
@@ -1239,6 +1254,11 @@ p.cstm-more-btn a:hover::before {
     right: -50px;
   }
 
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
+    right: -50px;
+  }
+
   .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link::before {
     content: none;
   }
@@ -1249,9 +1269,24 @@ p.cstm-more-btn a:hover::before {
 
   }
 
+
   /* Pickup 3列配置 col-3-mode 4列配置 col-4-mode*/
   .cstm-pat-7 .cstm-navi-card-lglist:is(.col-3-mode, .col-4-mode) .navi-entry-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* cstm-navi-ribbon */
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-3-mode, .col-4-mode) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+    /* font-size: 12px;
+    width: 110px;
+    padding: 10px 0; */
+    right: -20px;
+    top: 10px;
+  }
+
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-3-mode, .col-4-mode) .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
+    /* clip-path: polygon(-100vw 0, 100% 0, calc(100% - var(--r)) 50%, 100% 100%, -100vw 100%); */
+    right: -20px;
   }
 
 
@@ -1358,7 +1393,7 @@ p.cstm-more-btn a:hover::before {
     font-size: 14px;
   }
 
-  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-mode, .col-3-mode) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
+  .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:is(.col-mode, .col-3-mode) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
   .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist:where(.col-mode, .col-3-mode) .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
     font-size: 12px;
     width: 100px;
