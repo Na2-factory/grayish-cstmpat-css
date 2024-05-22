@@ -10,10 +10,10 @@
   display: none;
 }
 
-/* サイト型のみ　ブログ型では無効 */
-.body.skin-grayish.front-top-page:not(.blog) :where(.content-top, .content-bottom) {
+/* サイト型のみ　ブログ型では無効 -> 不要と判断、削除*/
+/* .body.skin-grayish.front-top-page:not(.blog) :where(.content-top, .content-bottom) {
   margin: 0;
-}
+} */
 
 /* サイト型のみ　ブログ型では無効 */
 .body.skin-grayish.front-top-page:not(.blog) .content .main {
