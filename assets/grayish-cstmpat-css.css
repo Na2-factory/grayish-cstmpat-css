@@ -418,33 +418,6 @@ p.cstm-more-btn a:hover::before {
   mask: var(--mask);
 }
 
-/* もこもこはSafariでうまくいかない。削除 */
-/* mask もこもこ 上 */
-.cstm-moko-top {
-  --mask:
-    linear-gradient(to bottom, #0000 4vmin, #000 0),
-    radial-gradient(4vmin, #000 98%, #0000) top/5vmin 10vmin;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-}
-
-.cstm-moko-bottom {
-  --mask:
-    linear-gradient(to top, #0000 4vmin, #000 0),
-    radial-gradient(4vmin, #000 98%, #0000) bottom/5vmin 10vmin;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-}
-
-.cstm-moko-top-bottom {
-  --mask:
-    linear-gradient(0deg, #0000 4vmin, #000 0) 0 2vmin,
-    radial-gradient(4vmin, #000 98%, #0000) 50%/5vmin 10vmin repeat space;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-}
-
-
 /* mask 円弧 上 */
 .cstm-curved-edge-top {
   --c: 7vmin;
