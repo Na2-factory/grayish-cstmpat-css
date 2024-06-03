@@ -369,124 +369,174 @@ p.cstm-more-btn a:hover::before {
 /* ========== wavewave & zig start ==========　*/
 /* v1.0.5 add */
 /* mask なみなみ 上 */
-.cstm-wave-top,
-.cstm-wave-top-img img {
+.cstm-wave-top {
   --mask:
-    radial-gradient(3.05vh at 50% 4.3vh, #000 99%, #0000 101%) calc(50% - 4vh) 0/8vh 100%,
-    radial-gradient(3.05vh at 50% -2.3vh, #0000 99%, #000 101%) 50% 2vh/8vh 100% repeat-x;
+    radial-gradient(3.05vmin at 50% 4.3vmin, #000 99%, #0000 101%) calc(50% - 4vmin) 0/8vmin 100%,
+    radial-gradient(3.05vmin at 50% -2.3vmin, #0000 99%, #000 101%) 50% 2vmin/8vmin 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
 
 /* mask なみなみ 下 */
-.cstm-wave-bottom,
-.cstm-wave-bottom-img img {
+.cstm-wave-bottom {
   --mask:
-    radial-gradient(3.05vh at 50% calc(100% - 4.3vh), #000 99%, #0000 101%) calc(50% - 4vh) 0/8vh 100%,
-    radial-gradient(3.05vh at 50% calc(100% + 2.3vh), #0000 99%, #000 101%) 50% calc(100% - 2vh)/8vh 100% repeat-x;
+    radial-gradient(3.05vmin at 50% calc(100% - 4.3vmin), #000 99%, #0000 101%) calc(50% - 4vmin) 0/8vmin 100%,
+    radial-gradient(3.05vmin at 50% calc(100% + 2.3vmin), #0000 99%, #000 101%) 50% calc(100% - 2vmin)/8vmin 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
 
 /* mask なみなみ 上下 */
-.cstm-wave-top-bottom,
-.cstm-wave-top-bottom-img img {
+.cstm-wave-top-bottom {
   --mask:
-    radial-gradient(3.05vh at 50% 4.3vh, #000 99%, #0000 101%) calc(50% - 4vh) 0/8vh 51% repeat-x,
-    radial-gradient(3.05vh at 50% -2.3vh, #0000 99%, #000 101%) 50% 2vh/8vh calc(51% - 2vh) repeat-x,
-    radial-gradient(3.05vh at 50% calc(100% - 4.3vh), #000 99%, #0000 101%) calc(50% - 4vh) 100%/8vh 51% repeat-x,
-    radial-gradient(3.05vh at 50% calc(100% + 2.3vh), #0000 99%, #000 101%) 50% calc(100% - 2vh)/8vh calc(51% - 2vh) repeat-x;
+    radial-gradient(3.05vmin at 50% 4.3vmin, #000 99%, #0000 101%) calc(50% - 4vmin) 0/8vmin 51% repeat-x,
+    radial-gradient(3.05vmin at 50% -2.3vmin, #0000 99%, #000 101%) 50% 2vmin/8vmin calc(51% - 2vmin) repeat-x,
+    radial-gradient(3.05vmin at 50% calc(100% - 4.3vmin), #000 99%, #0000 101%) calc(50% - 4vmin) 100%/8vmin 51% repeat-x,
+    radial-gradient(3.05vmin at 50% calc(100% + 2.3vmin), #0000 99%, #000 101%) 50% calc(100% - 2vmin)/8vmin calc(51% - 2vmin) repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
 
 /* mask ギザギザ 上 */
-.cstm-zig-top,
-.cstm-zig-top-img img {
-  --mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50%/4vh 100%;
+.cstm-zig-top {
+  --mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50%/4vmin 100%;
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
 
-.cstm-zig-bottom,
-.cstm-zig-bottom-img img {
-  --mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50%/40px 100%;
+.cstm-zig-bottom {
+  --mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50%/4vmin 100%;
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
 
-.cstm-zig-top-bottom,
-.cstm-zig-top-bottom-img img {
+.cstm-zig-top-bottom {
   --mask:
-    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top/4vh 51% repeat-x,
-    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom/4vh 51% repeat-x;
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top/4vmin 51% repeat-x,
+    conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom/4vmin 51% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
+
+/* mask もこもこ 上 */
+.cstm-moko-top {
+  --mask:
+    linear-gradient(to bottom, #0000 4vmin, #000 0),
+    radial-gradient(4vmin, #000 98%, #0000) top/5vmin 10vmin;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.cstm-moko-bottom {
+  --mask:
+    linear-gradient(to top, #0000 4vmin, #000 0),
+    radial-gradient(4vmin, #000 98%, #0000) bottom/5vmin 10vmin;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.cstm-moko-top-bottom {
+  --mask:
+    linear-gradient(0deg, #0000 4vmin, #000 0) 0 2vmin,
+    radial-gradient(4vmin, #000 98%, #0000) 50%/5vmin 10vmin repeat space;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
 
 /* mask 円弧 上 */
-.cstm-curved-edge-top,
-.cstm-curved-edge-top-img img {
+.cstm-curved-edge-top {
   --c: 7vmin;
-  aspect-ratio: 1;
   mask: radial-gradient(60% var(--c) at top, #0000 calc(100% - 1px), #000);
 }
 
 /* mask 円弧 下 */
-.cstm-curved-edge-bottom,
-.cstm-curved-edge-bottom-img img {
+.cstm-curved-edge-bottom {
   --c: 7vmin;
-  aspect-ratio: 1;
   mask: radial-gradient(60% var(--c) at bottom, #0000 calc(100% - 2px), #000);
 }
 
 /* mask 円弧 上下 */
-.cstm-curved-edge-top-bottom,
-.cstm-curved-edge-top-bottom-img img {
+.cstm-curved-edge-top-bottom {
   --c: 7vmin;
-  aspect-ratio: 1;
   mask: radial-gradient(60% var(--c) at 50% var(--c), #0000 calc(100% - 2px), #000) 0 calc(-1*var(--c));
 }
 
 /* 斜め */
-.cstm-clip-top,
-.cstm-clip-top-img img {
+.cstm-clip-top {
   clip-path: polygon(0 0, 100% 7vmin, 100% 100%, 0 100%);
 }
 
-.cstm-clip-bottom,
-.cstm-clip-bottom-img img {
+.cstm-clip-bottom {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vmin));
 }
 
-.cstm-clip-top-bottom,
-.cstm-clip-top-bottom-img img {
+.cstm-clip-top-bottom {
   clip-path: polygon(0 0, 100% 7vmin, 100% 100%, 0 calc(100% - 7vmin));
 }
 
 /* 斜め 右　*/
-.cstm-clip-top-r,
-.cstm-clip-top-r-img img {
+.cstm-clip-top-r {
   clip-path: polygon(0 7vmin, 100% 0, 100% 100%, 0% 100%);
 }
 
-.cstm-clip-bottom-r,
-.cstm-clip-bottom-r-img img {
+.cstm-clip-bottom-r {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vmin), 0 100%);
 }
 
-.cstm-clip-top-bottom-r,
-.cstm-clip-top-bottom-r-img img {
+.cstm-clip-top-bottom-r {
   clip-path: polygon(0 7vmin, 100% 0, 100% calc(100% - 7vmin), 0 100%);
 }
 
+/* シンプルなライン */
+.cstm-simple-line {
+  height: 1px;
+  padding: 0;
+  min-height: 0 !important;
+}
+
+/* ジグザグライン */
+/* HTML: <div class="zig-zag-line"></div> */
+.cstm-zig-zag-line {
+  --a: 90deg;
+  /* control the angle */
+  --s: 4vmin;
+  /* size of the zig-zag */
+  --b: 2px;
+  /* control the thickness */
+
+  height: calc(var(--b) + var(--s)/(2*tan(var(--a)/2)));
+  --_g: var(--s) repeat-x conic-gradient(from calc(var(--a)/-2) at bottom,
+      #0000, #000 1deg calc(var(--a) - 1deg), #0000 var(--a));
+  mask: 50% calc(-1*var(--b))/var(--_g) exclude, 50%/var(--_g);
+  padding: 0;
+  min-height: 0 !important;
+}
+
+/* なみなみライン */
+.cstm-wave-line {
+  --s: 3vmin;
+  /* size of the wave */
+  --b: 1px;
+  /* thickness of the line */
+  --m: 0.8;
+  /* curvature of the wave [0 2] */
+
+  --R: calc(var(--s)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+  height: calc(2*var(--R));
+  --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+  mask:
+    radial-gradient(var(--R) at left 50% bottom calc(-1*var(--m)*var(--s)), var(--_g)) calc(50% - 2*var(--s)) calc(50% - var(--s)/2 - var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x,
+    radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)), var(--_g)) 50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
+  padding: 0;
+  min-height: 0 !important;
+}
 
 .cstm-noinner {
   padding: 0;
   height: auto;
   min-height: 0;
 }
-
 
 /* ========== wavewave & zig end ==========　*/
 
