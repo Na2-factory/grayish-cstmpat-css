@@ -418,6 +418,7 @@ p.cstm-more-btn a:hover::before {
   mask: var(--mask);
 }
 
+/* もこもこはSafariでうまくいかない。削除 */
 /* mask もこもこ 上 */
 .cstm-moko-top {
   --mask:
