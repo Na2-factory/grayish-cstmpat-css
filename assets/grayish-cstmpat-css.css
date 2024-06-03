@@ -470,7 +470,6 @@ p.cstm-more-btn a:hover::before {
 }
 
 /* ジグザグライン */
-/* HTML: <div class="zig-zag-line"></div> */
 .cstm-zig-zag-line {
   --a: 90deg;
   /* control the angle */
