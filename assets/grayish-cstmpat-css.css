@@ -1147,6 +1147,18 @@ p.cstm-more-btn a:hover::before {
 @media screen and (max-width: 1023px) {
 
   /* ========== common start ==========　*/
+  /* モバイル時のみ　画像ブロックなど画面幅 */
+  .cstm-blk-fullwide-mbonly {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+  }
+
+  .cstm-blk-fullwide-inner-mbonly {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    padding: 0 calc(50vw - 50%);
+  }
+
   /* More btn */
   p.cstm-more-btn {
     padding-right: 1em;
