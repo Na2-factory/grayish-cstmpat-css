@@ -566,15 +566,18 @@ p.cstm-more-btn a:hover::before {
 /* ========== cstm-pat-2 start ==========　*/
 /* cstm-pat-2 */
 /* NewPost 新着記事一覧をブロックで作るデモ */
+/* ショートコード(ordered_posts)対応 */
 .cstm-pat-2.cstm-blk-fullwide-inner {
   min-height: 430px;
 }
 
-.cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap {
+.cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap,
+.cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards .a-wrap {
   line-height: 1.6;
 }
 
-.cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards {
+.cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards,
+.cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards {
   display: grid;
   place-content: center;
   grid-template-rows: auto;
@@ -1234,7 +1237,8 @@ p.cstm-more-btn a:hover::before {
   /* ========== cstm-pat-1 end ==========　*/
 
   /* ========== cstm-pat-2 start ==========　*/
-  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .new-entry-card-title {
+  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .new-entry-card-title,
+  .cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards .new-entry-card-title {
     font-size: 16px;
   }
 
@@ -1335,11 +1339,13 @@ p.cstm-more-btn a:hover::before {
 @media screen and (max-width: 834px) {
 
   /* ========== cstm-pat-2 start ==========　*/
-  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards {
+  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards,
+  .cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap {
+  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap,
+  .cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards .a-wrap {
     max-width: unset;
   }
 
@@ -1496,7 +1502,8 @@ p.cstm-more-btn a:hover::before {
 
   /* ========== cstm-pat-2 start ==========　*/
 
-  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards {
+  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards,
+  .cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards {
     grid-template-columns: minmax(0, 1fr);
   }
 

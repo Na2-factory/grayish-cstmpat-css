@@ -2,7 +2,7 @@
 /*
 Plugin Name: grayish-cstmpat-css
 Description: grayishの1カラム用サンプルパターン向けCSSを追加するプラグイン
-Version: 1.0.5
+Version: 1.0.6
 Author: Na2factory
 Author URI: https://na2-factory.com/
 License: GNU General Public License
@@ -13,13 +13,13 @@ if (!defined('ABSPATH')) exit;
 
 // 現在のテーマがcocoon-master or cocoon-masterの子テーマである場合のみ処理を行う
 $theme = wp_get_theme();
-if ('cocoon-master' !== $theme->template && (!$theme->parent() || 'cocoon-master' !== $theme->parent()->template)) {
+if (!$theme || ('cocoon-master' !== $theme->template && (!$theme->parent() || 'cocoon-master' !== $theme->parent()->template))) {
 	return;
 }
 
 
 if (!defined('GRY_CSTMPAT_PLUGIN_VERSION')) {
-	define('GRY_CSTMPAT_PLUGIN_VERSION', '1.0.5');
+	define('GRY_CSTMPAT_PLUGIN_VERSION', '1.0.6');
 }
 
 if (!defined('GRY_CSTMPAT_PLUGIN_PATH')) {
