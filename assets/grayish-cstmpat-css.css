@@ -927,46 +927,45 @@ p.cstm-more-btn a:hover::before {
   left: -9px;
 }
 
-/* cstm-pat-7　cstm-infinite-loop-swiper,cstm-normal-loop-swiperでスキンのリボンスタイルに対応（ブロックのみ） */
-
+/* v1.0.7 cstm-navi-ribbonを追加することでcstm-pat-7以外のナビカードにも有効　ブロック・ショートコード対応 */
 /* リボンの色1：おすすめ */
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-1 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-1 span,
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-card-link .navi-entry-card .ribbon-color-1 span {
+.cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-1 span {
   background-color: var(--Blk_Pink_T0);
 }
 
 /* リボンの色2：新着 */
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-2 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-2 span,
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-card-link .navi-entry-card .ribbon-color-2 span {
+.cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-2 span {
   background-color: var(--LtBlue_T0);
 }
 
 /* リボンの色3：注目 */
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-3 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-3 span,
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-card-link .navi-entry-card .ribbon-color-3 span {
+.cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-3 span {
   background-color: var(--Blk_Beige_T0);
 }
 
 /* リボンの色4：必見 */
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-4 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-4 span,
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-card-link .navi-entry-card .ribbon-color-4 span {
+.cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-4 span {
   background-color: var(--Blk_Green_T0);
 }
 
 /* リボンの色5：お得 */
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-5 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-5 span,
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-card-link .navi-entry-card .ribbon-color-5 span {
+.cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-5 span {
   background-color: var(--Blk_Pink_T0);
 }
 
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left,
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left {
+.cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left {
   top: 0;
   left: 0;
   overflow: visible;
@@ -974,7 +973,7 @@ p.cstm-more-btn a:hover::before {
 
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-cards .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+:where(.cstm-navi-ribbon .navi-entry-cards, .cstm-navi-ribbon.navi-entry-cards) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
   color: var(--LtGray_S50);
   font-family: var(--skin-grayish-style-font);
   font-size: 14px;
@@ -990,7 +989,7 @@ p.cstm-more-btn a:hover::before {
 }
 
 /* card-small */
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-cards .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+:where(.cstm-navi-ribbon .navi-entry-cards, .cstm-navi-ribbon.navi-entry-cards) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
   font-size: 10px;
   width: 7em;
   padding: 0.6em 0;
@@ -999,13 +998,13 @@ p.cstm-more-btn a:hover::before {
 }
 
 /* card-small 枠線つき*/
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-cards.border-square .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+:where(.cstm-navi-ribbon .navi-entry-cards.border-square, .cstm-navi-ribbon.navi-entry-cards.border-square) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
   right: 1.6em;
   top: -0.6em;
 }
 
 /* card-large-image */
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-cards.card-large-image .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+:where(.cstm-navi-ribbon .navi-entry-cards.card-large-image, .cstm-navi-ribbon.navi-entry-cards.card-large-image) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
   font-size: 14px;
   width: 7em;
   padding: 0.6em 0;
@@ -1018,8 +1017,8 @@ p.cstm-more-btn a:hover::before {
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::after,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::before,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::after,
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::before,
-.cstm-navi-ribbon:where(.cstm-infinite-loop-swiper, .cstm-normal-loop-swiper) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::after {
+.cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::before,
+.cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left::after {
   display: none;
 }
 
@@ -1362,6 +1361,15 @@ p.cstm-more-btn a:hover::before {
     display: -webkit-box;
     overflow: hidden;
     font-size: clamp(0.75rem, 0.6395rem + 0.3683vw, 0.875rem);
+  }
+
+  /* for cstm-navi-ribbon, card-large-image */
+  :where(.cstm-navi-ribbon .navi-entry-cards.card-large-image, .cstm-navi-ribbon.navi-entry-cards.card-large-image) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
+    font-size: 12px;
+    width: 7em;
+    padding: 0.6em 0;
+    right: 0em;
+    top: 0.3em;
   }
 
   /* ========== cstm-pat-7 end ==========　*/
