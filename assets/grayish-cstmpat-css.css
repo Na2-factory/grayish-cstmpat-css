@@ -3,6 +3,14 @@
 /* grayishの1カラム向け　サンプルコード用CSS */
 
 /* ========== common start ==========　*/
+:root {
+  --cstm-ribbon-fontcolor: var(--LtGray_S50, #535252);
+  --cstm-ribbon-bgcolor-pink: var(--Blk_Pink_T0, #debfc2);
+  --cstm-ribbon-bgcolor-blue: var(--LtBlue_T0, #AAC2D2);
+  --cstm-ribbon-bgcolor-beige: var(--Blk_Beige_T0, #e1d1c6);
+  --cstm-ribbon-bgcolor-green: var(--Blk_Green_T0, #cddab9);
+}
+
 /* サイト型　フロントページのメインコンテンツ上下の余白対策 */
 .body.skin-grayish.front-top-page .breadcrumb,
 .body.skin-grayish.front-top-page .article-header,
@@ -932,35 +940,35 @@ p.cstm-more-btn a:hover::before {
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-1 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-1 span,
 .cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-1 span {
-  background-color: var(--Blk_Pink_T0);
+  background-color: var(--cstm-ribbon-bgcolor-pink);
 }
 
 /* リボンの色2：新着 */
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-2 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-2 span,
 .cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-2 span {
-  background-color: var(--LtBlue_T0);
+  background-color: var(--cstm-ribbon-bgcolor-blue);
 }
 
 /* リボンの色3：注目 */
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-3 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-3 span,
 .cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-3 span {
-  background-color: var(--Blk_Beige_T0);
+  background-color: var(--cstm-ribbon-bgcolor-beige);
 }
 
 /* リボンの色4：必見 */
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-4 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-4 span,
 .cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-4 span {
-  background-color: var(--Blk_Green_T0);
+  background-color: var(--cstm-ribbon-bgcolor-green);
 }
 
 /* リボンの色5：お得 */
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon-color-5 span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon-color-5 span,
 .cstm-navi-ribbon .navi-entry-card-link .navi-entry-card .ribbon-color-5 span {
-  background-color: var(--Blk_Pink_T0);
+  background-color: var(--cstm-ribbon-bgcolor-pink);
 }
 
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left,
@@ -974,7 +982,7 @@ p.cstm-more-btn a:hover::before {
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
 .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-smlist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
 :where(.cstm-navi-ribbon .navi-entry-cards, .cstm-navi-ribbon.navi-entry-cards) .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span {
-  color: var(--LtGray_S50);
+  color: var(--cstm-ribbon-fontcolor);
   font-family: var(--skin-grayish-style-font);
   font-size: 14px;
   box-shadow: unset;
