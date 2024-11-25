@@ -11,6 +11,11 @@
   --cstm-ribbon-bgcolor-green: var(--Blk_Green_T0, #cddab9);
 }
 
+/* ブロックエディター内の横スクロール防止 */
+.editor-styles-wrapper.body.article {
+  overflow-x: clip;
+}
+
 /* サイト型　フロントページのメインコンテンツ上下の余白対策 */
 .body.skin-grayish.front-top-page .breadcrumb,
 .body.skin-grayish.front-top-page .article-header,
@@ -1187,6 +1192,65 @@ p.cstm-more-btn a:hover::before {
 
 /* ========== cstm-pat-7 end ==========　*/
 
+/* Cocoon ver2.8.0以降対応　GoogleFont */
+
+.cstm-font-style-ital {
+  font-style: italic;
+}
+
+.cstm-skin-font-set-w100 {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 100;
+  letter-spacing: .1rem;
+}
+
+.cstm-skin-font-set-w200 {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 200;
+  letter-spacing: .1rem;
+}
+
+.cstm-skin-font-set-w300 {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 300;
+  letter-spacing: .1rem;
+}
+
+.cstm-skin-font-set-w400 {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 400;
+  letter-spacing: .1rem;
+}
+
+.cstm-skin-font-set-w500 {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 500;
+  letter-spacing: .1rem;
+}
+
+.cstm-skin-font-set-w600 {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 600;
+  letter-spacing: .1rem;
+}
+
+.cstm-skin-font-set-w700 {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 700;
+  letter-spacing: .1rem;
+}
+
+.cstm-skin-font-set-w800 {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 800;
+  letter-spacing: .1rem;
+}
+
+.cstm-skin-font-set-w900 {
+  font-family: var(--skin-grayish-style-font);
+  font-weight: 900;
+  letter-spacing: .1rem;
+}
 
 /*1023px以下*/
 @media screen and (max-width: 1023px) {
