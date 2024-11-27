@@ -1198,58 +1198,72 @@ p.cstm-more-btn a:hover::before {
   font-style: italic;
 }
 
+[class^="cstm-skin-font-set-w"] {
+  letter-spacing: .1rem;
+  line-height: 1.4;
+}
+
 .cstm-skin-font-set-w100 {
   font-family: var(--skin-grayish-style-font);
   font-weight: 100;
-  letter-spacing: .1rem;
 }
 
 .cstm-skin-font-set-w200 {
   font-family: var(--skin-grayish-style-font);
   font-weight: 200;
-  letter-spacing: .1rem;
 }
 
 .cstm-skin-font-set-w300 {
   font-family: var(--skin-grayish-style-font);
   font-weight: 300;
-  letter-spacing: .1rem;
 }
 
 .cstm-skin-font-set-w400 {
   font-family: var(--skin-grayish-style-font);
   font-weight: 400;
-  letter-spacing: .1rem;
 }
 
 .cstm-skin-font-set-w500 {
   font-family: var(--skin-grayish-style-font);
   font-weight: 500;
-  letter-spacing: .1rem;
 }
 
 .cstm-skin-font-set-w600 {
   font-family: var(--skin-grayish-style-font);
   font-weight: 600;
-  letter-spacing: .1rem;
 }
 
 .cstm-skin-font-set-w700 {
   font-family: var(--skin-grayish-style-font);
   font-weight: 700;
-  letter-spacing: .1rem;
 }
 
 .cstm-skin-font-set-w800 {
   font-family: var(--skin-grayish-style-font);
   font-weight: 800;
-  letter-spacing: .1rem;
 }
 
 .cstm-skin-font-set-w900 {
   font-family: var(--skin-grayish-style-font);
   font-weight: 900;
-  letter-spacing: .1rem;
+}
+
+/* 縁取り */
+.cstm-font-style-stroke {
+  --cstm-text-stroke-color: var(--LtGray_S50, #535252);
+  -webkit-text-stroke: 1px var(--cstm-text-stroke-color);
+  color: transparent;
+  caret-color: #000;
+}
+
+/* 版ズレ */
+.cstm-font-style-hanzure {
+  --cstm-text-stroke-color: var(--LtGray_S50, #535252);
+  --cstm-text-shadow-color: var(--Blk_Pink_T0, #debfc2);
+  -webkit-text-stroke: 1px var(--cstm-text-stroke-color);
+  text-shadow: 3px 3px 0 var(--cstm-text-shadow-color);
+  color: transparent;
+  caret-color: #000;
 }
 
 /*1023px以下*/
