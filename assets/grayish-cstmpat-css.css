@@ -391,6 +391,7 @@ p.cstm-more-btn a:hover::before {
   mask: var(--mask);
 } */
 
+/* CSSネスト使用版 iOS16.5以降 */
 .cstm-wave-top {
   --mask:
     radial-gradient(33.6px at 50% 47px, #000 99%, #0000 101%) calc(50% - 40px) 0/80px 100%,
@@ -398,19 +399,23 @@ p.cstm-more-btn a:hover::before {
   -webkit-mask: var(--mask);
   mask: var(--mask);
 
-  @media (max-width: 834px) {
+  /* @media (max-width: 1023px) {
     --mask:
       radial-gradient(30.24px at 50% 42.3px, #000 99%, #0000 101%) calc(50% - 36px) 0/72px 100%,
       radial-gradient(30.24px at 50% -24.3px, #0000 99%, #000 101%) 50% 18px/72px 100% repeat-x;
+
+    @media (max-height: 500px) {
+      --mask:
+        radial-gradient(16.01px at 50% 22.5px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
+        radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px 100% repeat-x;
+    }
   }
 
   @media (max-width: 480px) {
     --mask:
       radial-gradient(16.01px at 50% 22.5px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
       radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px 100% repeat-x;
-  }
-
-
+  } */
 }
 
 /* mask なみなみ 下 */
@@ -426,20 +431,23 @@ p.cstm-more-btn a:hover::before {
   -webkit-mask: var(--mask);
   mask: var(--mask);
 
-  @media (max-width: 834px) {
+  /* @media (max-width: 1023px) {
     --mask:
       radial-gradient(30.24px at 50% calc(100% - 42.3px), #000 99%, #0000 101%) calc(50% - 36px) 0/72px 100%,
       radial-gradient(30.24px at 50% calc(100% + 24.3px), #0000 99%, #000 101%) 50% calc(100% - 18px)/72px 100% repeat-x;
 
+    @media (max-height: 500px) {
+      --mask:
+        radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
+        radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px 100% repeat-x;
+    }
   }
 
   @media (max-width: 480px) {
     --mask:
       radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
       radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px 100% repeat-x;
-
-  }
-
+  } */
 
 }
 
@@ -452,6 +460,7 @@ p.cstm-more-btn a:hover::before {
     radial-gradient(3.05vmin at 50% calc(100% + 2.3vmin), #0000 99%, #000 101%) 50% calc(100% - 2vmin)/8vmin calc(51% - 2vmin) repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask); */
+
   --mask:
     radial-gradient(33.6px at 50% 47px, #000 99%, #0000 101%) calc(50% - 40px) 0/80px 51% repeat-x,
     radial-gradient(33.6px at 50% -27px, #0000 99%, #000 101%) 50% 20px/80px calc(51% - 20px) repeat-x,
@@ -460,12 +469,20 @@ p.cstm-more-btn a:hover::before {
   -webkit-mask: var(--mask);
   mask: var(--mask);
 
-  @media (max-width: 834px) {
+  /* @media (max-width: 1023px) {
     --mask:
       radial-gradient(30.24px at 50% 42.3px, #000 99%, #0000 101%) calc(50% - 36px) 0/72px 51% repeat-x,
       radial-gradient(30.24px at 50% -24.3px, #0000 99%, #000 101%) 50% 18px/72px calc(51% - 18px) repeat-x,
       radial-gradient(30.24px at 50% calc(100% - 42.3px), #000 99%, #0000 101%) calc(50% - 36px) 100%/72px 51% repeat-x,
       radial-gradient(30.24px at 50% calc(100% + 24.3px), #0000 99%, #000 101%) 50% calc(100% - 18px)/72px calc(51% - 18px) repeat-x;
+
+    @media (max-height: 500px) {
+      --mask:
+        radial-gradient(16.01px at 50% 22.5px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 51% repeat-x,
+        radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px calc(51% - 10px) repeat-x,
+        radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 100%/40px 51% repeat-x,
+        radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px calc(51% - 10px) repeat-x;
+    }
   }
 
   @media (max-width: 480px) {
@@ -474,8 +491,7 @@ p.cstm-more-btn a:hover::before {
       radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px calc(51% - 10px) repeat-x,
       radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 100%/40px 51% repeat-x,
       radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px calc(51% - 10px) repeat-x;
-  }
-
+  } */
 }
 
 /* mask ギザギザ 上 */
@@ -501,20 +517,38 @@ p.cstm-more-btn a:hover::before {
 
 /* mask 円弧 上 */
 .cstm-curved-edge-top {
-  --c: 7vmin;
+  /* --c: 7vmin; */
+  --c: 78px;
   mask: radial-gradient(60% var(--c) at top, #0000 calc(100% - 1px), #000);
+
+  @media (max-width: 834px) {
+    --c: 58px;
+  }
+
+  @media (max-width: 480px) {}
+
 }
 
 /* mask 円弧 下 */
 .cstm-curved-edge-bottom {
-  --c: 7vmin;
+  /* --c: 7vmin; */
+  --c: 78px;
   mask: radial-gradient(60% var(--c) at bottom, #0000 calc(100% - 2px), #000);
+
+  @media (max-width: 834px) {
+    --c: 58px;
+  }
 }
 
 /* mask 円弧 上下 */
 .cstm-curved-edge-top-bottom {
-  --c: 7vmin;
+  /* --c: 7vmin; */
+  --c: 78px;
   mask: radial-gradient(60% var(--c) at 50% var(--c), #0000 calc(100% - 2px), #000) 0 calc(-1*var(--c));
+
+  @media (max-width: 834px) {
+    --c: 58px;
+  }
 }
 
 /* 斜め */
@@ -1334,6 +1368,9 @@ p.cstm-more-btn a:hover::before {
   caret-color: #000;
 }
 
+
+
+
 /*1023px以下*/
 @media screen and (max-width: 1023px) {
 
@@ -1528,9 +1565,58 @@ p.cstm-more-btn a:hover::before {
 
   /* ========== cstm-pat-7 end ==========　*/
 
+  /* mask なみなみの修正 */
+  /* CSSネストを使わない場合 */
+  .cstm-wave-top {
+    --mask:
+      radial-gradient(30.24px at 50% 42.3px, #000 99%, #0000 101%) calc(50% - 36px) 0/72px 100%,
+      radial-gradient(30.24px at 50% -24.3px, #0000 99%, #000 101%) 50% 18px/72px 100% repeat-x;
+  }
+
+  /* mask なみなみ 下 */
+  .cstm-wave-bottom {
+    --mask:
+      radial-gradient(30.24px at 50% calc(100% - 42.3px), #000 99%, #0000 101%) calc(50% - 36px) 0/72px 100%,
+      radial-gradient(30.24px at 50% calc(100% + 24.3px), #0000 99%, #000 101%) 50% calc(100% - 18px)/72px 100% repeat-x;
+  }
+
+  /* mask なみなみ 上下 */
+  .cstm-wave-top-bottom {
+    --mask:
+      radial-gradient(30.24px at 50% 42.3px, #000 99%, #0000 101%) calc(50% - 36px) 0/72px 51% repeat-x,
+      radial-gradient(30.24px at 50% -24.3px, #0000 99%, #000 101%) 50% 18px/72px calc(51% - 18px) repeat-x,
+      radial-gradient(30.24px at 50% calc(100% - 42.3px), #000 99%, #0000 101%) calc(50% - 36px) 100%/72px 51% repeat-x,
+      radial-gradient(30.24px at 50% calc(100% + 24.3px), #0000 99%, #000 101%) 50% calc(100% - 18px)/72px calc(51% - 18px) repeat-x;
+  }
 
 }
 
+/*画面幅1023px以下 かつ　画面の高さ 500px以下*/
+@media screen and (max-width: 1023px) and (max-height: 500px) {
+
+  /* mask なみなみ 上 */
+  .cstm-wave-top {
+    --mask:
+      radial-gradient(16.01px at 50% 22.5px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
+      radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px 100% repeat-x;
+  }
+
+  /* mask なみなみ 下 */
+  .cstm-wave-bottom {
+    --mask:
+      radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
+      radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px 100% repeat-x;
+  }
+
+  /* mask なみなみ 上下 */
+  .cstm-wave-top-bottom {
+    --mask:
+      radial-gradient(16.01px at 50% 22.5px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 51% repeat-x,
+      radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px calc(51% - 10px) repeat-x,
+      radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 100%/40px 51% repeat-x,
+      radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px calc(51% - 10px) repeat-x;
+  }
+}
 
 /*834px以下*/
 @media screen and (max-width: 834px) {
@@ -1653,7 +1739,6 @@ p.cstm-more-btn a:hover::before {
 
 
   /* ========== cstm-pat-7 end ==========　*/
-
 
 }
 
@@ -1779,5 +1864,27 @@ p.cstm-more-btn a:hover::before {
 
   /* ========== cstm-pat-7 end ==========　*/
 
+  /* mask なみなみ 上 */
+  .cstm-wave-top {
+    --mask:
+      radial-gradient(16.01px at 50% 22.5px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
+      radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px 100% repeat-x;
+  }
+
+  /* mask なみなみ 下 */
+  .cstm-wave-bottom {
+    --mask:
+      radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
+      radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px 100% repeat-x;
+  }
+
+  /* mask なみなみ 上下 */
+  .cstm-wave-top-bottom {
+    --mask:
+      radial-gradient(16.01px at 50% 22.5px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 51% repeat-x,
+      radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px calc(51% - 10px) repeat-x,
+      radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 100%/40px 51% repeat-x,
+      radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px calc(51% - 10px) repeat-x;
+  }
 
 }
