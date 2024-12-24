@@ -420,11 +420,6 @@ p.cstm-more-btn a:hover::before {
 
 /* mask なみなみ 下 */
 .cstm-wave-bottom {
-  /* --mask:
-    radial-gradient(3.05vmin at 50% calc(100% - 4.3vmin), #000 99%, #0000 101%) calc(50% - 4vmin) 0/8vmin 100%,
-    radial-gradient(3.05vmin at 50% calc(100% + 2.3vmin), #0000 99%, #000 101%) 50% calc(100% - 2vmin)/8vmin 100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask); */
   --mask:
     radial-gradient(33.6px at 50% calc(100% - 47px), #000 99%, #0000 101%) calc(50% - 40px) 0/80px 100%,
     radial-gradient(33.6px at 50% calc(100% + 27px), #0000 99%, #000 101%) 50% calc(100% - 20px)/80px 100% repeat-x;
@@ -453,14 +448,6 @@ p.cstm-more-btn a:hover::before {
 
 /* mask なみなみ 上下 */
 .cstm-wave-top-bottom {
-  /* --mask:
-    radial-gradient(3.05vmin at 50% 4.3vmin, #000 99%, #0000 101%) calc(50% - 4vmin) 0/8vmin 51% repeat-x,
-    radial-gradient(3.05vmin at 50% -2.3vmin, #0000 99%, #000 101%) 50% 2vmin/8vmin calc(51% - 2vmin) repeat-x,
-    radial-gradient(3.05vmin at 50% calc(100% - 4.3vmin), #000 99%, #0000 101%) calc(50% - 4vmin) 100%/8vmin 51% repeat-x,
-    radial-gradient(3.05vmin at 50% calc(100% + 2.3vmin), #0000 99%, #000 101%) 50% calc(100% - 2vmin)/8vmin calc(51% - 2vmin) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask); */
-
   --mask:
     radial-gradient(33.6px at 50% 47px, #000 99%, #0000 101%) calc(50% - 40px) 0/80px 51% repeat-x,
     radial-gradient(33.6px at 50% -27px, #0000 99%, #000 101%) 50% 20px/80px calc(51% - 20px) repeat-x,
@@ -517,7 +504,6 @@ p.cstm-more-btn a:hover::before {
 
 /* mask 円弧 上 */
 .cstm-curved-edge-top {
-  /* --c: 7vmin; */
   --c: 78px;
   mask: radial-gradient(60% var(--c) at top, #0000 calc(100% - 1px), #000);
 
@@ -537,7 +523,6 @@ p.cstm-more-btn a:hover::before {
 
 /* mask 円弧 下 */
 .cstm-curved-edge-bottom {
-  /* --c: 7vmin; */
   --c: 78px;
   mask: radial-gradient(60% var(--c) at bottom, #0000 calc(100% - 2px), #000);
 
@@ -556,7 +541,6 @@ p.cstm-more-btn a:hover::before {
 
 /* mask 円弧 上下 */
 .cstm-curved-edge-top-bottom {
-  /* --c: 7vmin; */
   --c: 78px;
   mask: radial-gradient(60% var(--c) at 50% var(--c), #0000 calc(100% - 2px), #000) 0 calc(-1*var(--c));
 
@@ -625,7 +609,6 @@ p.cstm-more-btn a:hover::before {
 
 /* なみなみライン */
 .cstm-wave-line {
-  /* --s: 3vmin; */
   --s: 30px;
   /* size of the wave */
   --b: 1px;
