@@ -382,32 +382,100 @@ p.cstm-more-btn a:hover::before {
 /* ========== wavewave & zig start ==========　*/
 /* v1.0.5 add */
 /* mask なみなみ 上 */
-.cstm-wave-top {
+/* Safari NG */
+/* .cstm-wave-top {
   --mask:
     radial-gradient(3.05vmin at 50% 4.3vmin, #000 99%, #0000 101%) calc(50% - 4vmin) 0/8vmin 100%,
     radial-gradient(3.05vmin at 50% -2.3vmin, #0000 99%, #000 101%) 50% 2vmin/8vmin 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
+} */
+
+.cstm-wave-top {
+  --mask:
+    radial-gradient(33.6px at 50% 47px, #000 99%, #0000 101%) calc(50% - 40px) 0/80px 100%,
+    radial-gradient(33.6px at 50% -27px, #0000 99%, #000 101%) 50% 20px/80px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+
+  @media (max-width: 834px) {
+    --mask:
+      radial-gradient(30.24px at 50% 42.3px, #000 99%, #0000 101%) calc(50% - 36px) 0/72px 100%,
+      radial-gradient(30.24px at 50% -24.3px, #0000 99%, #000 101%) 50% 18px/72px 100% repeat-x;
+  }
+
+  @media (max-width: 480px) {
+    --mask:
+      radial-gradient(16.01px at 50% 22.5px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
+      radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px 100% repeat-x;
+  }
+
+
 }
 
 /* mask なみなみ 下 */
 .cstm-wave-bottom {
-  --mask:
+  /* --mask:
     radial-gradient(3.05vmin at 50% calc(100% - 4.3vmin), #000 99%, #0000 101%) calc(50% - 4vmin) 0/8vmin 100%,
     radial-gradient(3.05vmin at 50% calc(100% + 2.3vmin), #0000 99%, #000 101%) 50% calc(100% - 2vmin)/8vmin 100% repeat-x;
   -webkit-mask: var(--mask);
+  mask: var(--mask); */
+  --mask:
+    radial-gradient(33.6px at 50% calc(100% - 47px), #000 99%, #0000 101%) calc(50% - 40px) 0/80px 100%,
+    radial-gradient(33.6px at 50% calc(100% + 27px), #0000 99%, #000 101%) 50% calc(100% - 20px)/80px 100% repeat-x;
+  -webkit-mask: var(--mask);
   mask: var(--mask);
+
+  @media (max-width: 834px) {
+    --mask:
+      radial-gradient(30.24px at 50% calc(100% - 42.3px), #000 99%, #0000 101%) calc(50% - 36px) 0/72px 100%,
+      radial-gradient(30.24px at 50% calc(100% + 24.3px), #0000 99%, #000 101%) 50% calc(100% - 18px)/72px 100% repeat-x;
+
+  }
+
+  @media (max-width: 480px) {
+    --mask:
+      radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 0/40px 100%,
+      radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px 100% repeat-x;
+
+  }
+
+
 }
 
 /* mask なみなみ 上下 */
 .cstm-wave-top-bottom {
-  --mask:
+  /* --mask:
     radial-gradient(3.05vmin at 50% 4.3vmin, #000 99%, #0000 101%) calc(50% - 4vmin) 0/8vmin 51% repeat-x,
     radial-gradient(3.05vmin at 50% -2.3vmin, #0000 99%, #000 101%) 50% 2vmin/8vmin calc(51% - 2vmin) repeat-x,
     radial-gradient(3.05vmin at 50% calc(100% - 4.3vmin), #000 99%, #0000 101%) calc(50% - 4vmin) 100%/8vmin 51% repeat-x,
     radial-gradient(3.05vmin at 50% calc(100% + 2.3vmin), #0000 99%, #000 101%) 50% calc(100% - 2vmin)/8vmin calc(51% - 2vmin) repeat-x;
   -webkit-mask: var(--mask);
+  mask: var(--mask); */
+  --mask:
+    radial-gradient(33.6px at 50% 47px, #000 99%, #0000 101%) calc(50% - 40px) 0/80px 51% repeat-x,
+    radial-gradient(33.6px at 50% -27px, #0000 99%, #000 101%) 50% 20px/80px calc(51% - 20px) repeat-x,
+    radial-gradient(33.6px at 50% calc(100% - 47px), #000 99%, #0000 101%) calc(50% - 40px) 100%/80px 51% repeat-x,
+    radial-gradient(33.6px at 50% calc(100% + 27px), #0000 99%, #000 101%) 50% calc(100% - 20px)/80px calc(51% - 20px) repeat-x;
+  -webkit-mask: var(--mask);
   mask: var(--mask);
+
+  @media (max-width: 834px) {
+    --mask:
+      radial-gradient(30.24px at 50% 42.3px, #000 99%, #0000 101%) calc(50% - 36px) 0/72px 51% repeat-x,
+      radial-gradient(30.24px at 50% -24.3px, #0000 99%, #000 101%) 50% 18px/72px calc(51% - 18px) repeat-x,
+      radial-gradient(30.24px at 50% calc(100% - 42.3px), #000 99%, #0000 101%) calc(50% - 36px) 100%/72px 51% repeat-x,
+      radial-gradient(30.24px at 50% calc(100% + 24.3px), #0000 99%, #000 101%) 50% calc(100% - 18px)/72px calc(51% - 18px) repeat-x;
+  }
+
+  @media (max-width: 480px) {
+    --mask:
+      radial-gradient(16.01px at 50% 22.5px, #000 99%, #0000 101%) calc(50% - 20px) 0/40px 51% repeat-x,
+      radial-gradient(16.01px at 50% -12.5px, #0000 99%, #000 101%) 50% 10px/40px calc(51% - 10px) repeat-x,
+      radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 100%/40px 51% repeat-x,
+      radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px calc(51% - 10px) repeat-x;
+  }
+
 }
 
 /* mask ギザギザ 上 */
