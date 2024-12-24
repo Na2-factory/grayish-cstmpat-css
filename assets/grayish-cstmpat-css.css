@@ -521,7 +521,7 @@ p.cstm-more-btn a:hover::before {
   --c: 78px;
   mask: radial-gradient(60% var(--c) at top, #0000 calc(100% - 1px), #000);
 
-  @media (max-width: 1023px) {
+  /* @media (max-width: 1023px) {
     --c: 58px;
 
     @media (max-height: 500px) {
@@ -531,7 +531,7 @@ p.cstm-more-btn a:hover::before {
 
   @media (max-width: 480px) {
     --c: 33px;
-  }
+  } */
 
 }
 
@@ -541,7 +541,7 @@ p.cstm-more-btn a:hover::before {
   --c: 78px;
   mask: radial-gradient(60% var(--c) at bottom, #0000 calc(100% - 2px), #000);
 
-  @media (max-width: 1023px) {
+  /* @media (max-width: 1023px) {
     --c: 58px;
 
     @media (max-height: 500px) {
@@ -551,7 +551,7 @@ p.cstm-more-btn a:hover::before {
 
   @media (max-width: 480px) {
     --c: 33px;
-  }
+  } */
 }
 
 /* mask 円弧 上下 */
@@ -560,7 +560,7 @@ p.cstm-more-btn a:hover::before {
   --c: 78px;
   mask: radial-gradient(60% var(--c) at 50% var(--c), #0000 calc(100% - 2px), #000) 0 calc(-1*var(--c));
 
-  @media (max-width: 1023px) {
+  /* @media (max-width: 1023px) {
     --c: 58px;
 
     @media (max-height: 500px) {
@@ -570,7 +570,7 @@ p.cstm-more-btn a:hover::before {
 
   @media (max-width: 480px) {
     --c: 33px;
-  }
+  } */
 }
 
 /* 斜め */
@@ -1611,6 +1611,12 @@ p.cstm-more-btn a:hover::before {
       radial-gradient(30.24px at 50% calc(100% + 24.3px), #0000 99%, #000 101%) 50% calc(100% - 18px)/72px calc(51% - 18px) repeat-x;
   }
 
+  /* mask 円弧 */
+  .cstm-curved-edge-top,
+  .cstm-curved-edge-bottom,
+  .cstm-curved-edge-top-bottom {
+    --c: 58px;
+  }
 }
 
 /*画面幅1023px以下 かつ　画面の高さ 500px以下*/
@@ -1638,6 +1644,14 @@ p.cstm-more-btn a:hover::before {
       radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 100%/40px 51% repeat-x,
       radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px calc(51% - 10px) repeat-x;
   }
+
+  /* mask 円弧 */
+  .cstm-curved-edge-top,
+  .cstm-curved-edge-bottom,
+  .cstm-curved-edge-top-bottom {
+    --c: 33px;
+  }
+
 }
 
 /*834px以下*/
@@ -1908,5 +1922,13 @@ p.cstm-more-btn a:hover::before {
       radial-gradient(16.01px at 50% calc(100% - 22.5px), #000 99%, #0000 101%) calc(50% - 20px) 100%/40px 51% repeat-x,
       radial-gradient(16.01px at 50% calc(100% + 12.5px), #0000 99%, #000 101%) 50% calc(100% - 10px)/40px calc(51% - 10px) repeat-x;
   }
+
+  /* mask 円弧 */
+  .cstm-curved-edge-top,
+  .cstm-curved-edge-bottom,
+  .cstm-curved-edge-top-bottom {
+    --c: 33px;
+  }
+
 
 }
