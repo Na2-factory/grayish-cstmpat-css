@@ -625,7 +625,8 @@ p.cstm-more-btn a:hover::before {
 
 /* なみなみライン */
 .cstm-wave-line {
-  --s: 3vmin;
+  /* --s: 3vmin; */
+  --s: 30px;
   /* size of the wave */
   --b: 1px;
   /* thickness of the line */
@@ -640,6 +641,20 @@ p.cstm-more-btn a:hover::before {
     radial-gradient(var(--R) at left 50% top calc(-1*var(--m)*var(--s)), var(--_g)) 50% calc(50% + var(--s)/2 + var(--b)/2)/calc(4*var(--s)) calc(var(--s) + var(--b)) repeat-x;
   padding: 0;
   min-height: 0 !important;
+
+  /* CSSネスト */
+  /* @media (max-width: 1023px) {
+    --s: 24px;
+
+    @media (max-height: 500px) {
+      --s: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    --s: 14px;
+  } */
+
 }
 
 .cstm-noinner {
@@ -1617,6 +1632,11 @@ p.cstm-more-btn a:hover::before {
   .cstm-curved-edge-top-bottom {
     --c: 58px;
   }
+
+  /* なみなみライン */
+  .cstm-wave-line {
+    --s: 24px;
+  }
 }
 
 /*画面幅1023px以下 かつ　画面の高さ 500px以下*/
@@ -1650,6 +1670,11 @@ p.cstm-more-btn a:hover::before {
   .cstm-curved-edge-bottom,
   .cstm-curved-edge-top-bottom {
     --c: 33px;
+  }
+
+  /* なみなみライン */
+  .cstm-wave-line {
+    --s: 14px;
   }
 
 }
@@ -1930,5 +1955,9 @@ p.cstm-more-btn a:hover::before {
     --c: 33px;
   }
 
+  /* なみなみライン */
+  .cstm-wave-line {
+    --s: 14px;
+  }
 
 }
