@@ -521,11 +521,17 @@ p.cstm-more-btn a:hover::before {
   --c: 78px;
   mask: radial-gradient(60% var(--c) at top, #0000 calc(100% - 1px), #000);
 
-  @media (max-width: 834px) {
+  @media (max-width: 1023px) {
     --c: 58px;
+
+    @media (max-height: 500px) {
+      --c: 33px;
+    }
   }
 
-  @media (max-width: 480px) {}
+  @media (max-width: 480px) {
+    --c: 33px;
+  }
 
 }
 
@@ -535,8 +541,16 @@ p.cstm-more-btn a:hover::before {
   --c: 78px;
   mask: radial-gradient(60% var(--c) at bottom, #0000 calc(100% - 2px), #000);
 
-  @media (max-width: 834px) {
+  @media (max-width: 1023px) {
     --c: 58px;
+
+    @media (max-height: 500px) {
+      --c: 33px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    --c: 33px;
   }
 }
 
@@ -546,8 +560,16 @@ p.cstm-more-btn a:hover::before {
   --c: 78px;
   mask: radial-gradient(60% var(--c) at 50% var(--c), #0000 calc(100% - 2px), #000) 0 calc(-1*var(--c));
 
-  @media (max-width: 834px) {
+  @media (max-width: 1023px) {
     --c: 58px;
+
+    @media (max-height: 500px) {
+      --c: 33px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    --c: 33px;
   }
 }
 
