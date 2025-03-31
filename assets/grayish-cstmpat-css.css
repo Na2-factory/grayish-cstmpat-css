@@ -269,7 +269,7 @@ p.cstm-more-btn a:hover::before {
 
 /* coverブロック内の上下の余白 */
 /* clip-pathなし */
-:where(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7)>.wp-block-cover__inner-container {
+:where(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7, .cstm-pat-8, .cstm-pat-9)>.wp-block-cover__inner-container {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
@@ -699,20 +699,20 @@ p.cstm-more-btn a:hover::before {
 /* ========== cstm-pat-1 end ==========　*/
 
 /* ========== cstm-pat-2 start ==========　*/
-/* cstm-pat-2 */
+/* cstm-pat-2, cstm-pat-8 sp 2列モード追加, cstm-pat-9 pc 4列、sp 2列モード追加 */
 /* NewPost 新着記事一覧をブロックで作るデモ */
 /* ショートコード(ordered_posts)対応 */
-.cstm-pat-2.cstm-blk-fullwide-inner {
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9).cstm-blk-fullwide-inner {
   min-height: 430px;
 }
 
-.cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap,
-.cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards .a-wrap {
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap,
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .cstm-ect-vertical-card.new-entry-cards .a-wrap {
   line-height: 1.6;
 }
 
-.cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards,
-.cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards {
+:is(.cstm-pat-2, .cstm-pat-8) .new-list-box.cstm-ect-vertical-card .new-entry-cards,
+:is(.cstm-pat-2, .cstm-pat-8) .cstm-ect-vertical-card.new-entry-cards {
   display: grid;
   place-content: center;
   grid-template-rows: auto;
@@ -722,14 +722,15 @@ p.cstm-more-btn a:hover::before {
   row-gap: 4px;
 }
 
+
 /* 新着記事ウィジェット　指定のクラス名のときのみ　投稿日・更新日を表示 */
-.cstm-pat-2 .new-entry-card.widget-entry-card {
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card.widget-entry-card {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.cstm-pat-2 .new-entry-card-thumb.widget-entry-card-thumb {
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-thumb.widget-entry-card-thumb {
   margin: 0;
   flex-shrink: 0;
 }
@@ -743,14 +744,14 @@ p.cstm-more-btn a:hover::before {
   padding: 0.6em 0;
 }
 
-.cstm-pat-2 .new-entry-card-title.widget-entry-card-title.card-title {
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-title.widget-entry-card-title.card-title {
   -webkit-line-clamp: unset;
   height: auto;
   display: block;
   overflow: visible;
 }
 
-.cstm-pat-2 .new-entry-card-date {
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-date {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -760,16 +761,16 @@ p.cstm-more-btn a:hover::before {
   margin-top: auto;
 }
 
-.cstm-pat-2 .new-entry-card-post-date.widget-entry-card-post-date.post-date,
-.cstm-pat-2 .new-entry-card-update-date.widget-entry-card-update-date.post-update {
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-post-date.widget-entry-card-post-date.post-date,
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-update-date.widget-entry-card-update-date.post-update {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   position: relative;
 }
 
 
-.cstm-pat-2 .new-entry-card-post-date.widget-entry-card-post-date.post-date::before,
-.cstm-pat-2 .new-entry-card-update-date.widget-entry-card-update-date.post-update::before {
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-post-date.widget-entry-card-post-date.post-date::before,
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-update-date.widget-entry-card-update-date.post-update::before {
   /* display: inline-block; */
   display: none;
   content: "\f017";
@@ -780,14 +781,36 @@ p.cstm-more-btn a:hover::before {
   margin-right: 3px;
 }
 
-.cstm-pat-2 .new-entry-card-update-date.widget-entry-card-update-date.post-update::before {
+:is(.cstm-pat-2, .cstm-pat-8) .new-entry-card-update-date.widget-entry-card-update-date.post-update::before {
   font-weight: 900;
   content: "\f1da";
 }
 
+/* subgrid */
+:is(.cstm-pat-8, .cstm-pat-9) .new-list-box.cstm-ect-vertical-card .new-entry-cards .new-entry-card-link.a-wrap,
+:is(.cstm-pat-8, .cstm-pat-9) .cstm-ect-vertical-card.new-entry-cards .new-entry-card-link.a-wrap,
+:is(.cstm-pat-8, .cstm-pat-9) .new-list-box.cstm-ect-vertical-card .new-entry-cards .new-entry-card-link.a-wrap .new-entry-card.widget-entry-card,
+:is(.cstm-pat-8, .cstm-pat-9) .cstm-ect-vertical-card.new-entry-cards .new-entry-card-link.a-wrap .new-entry-card.widget-entry-card,
+:is(.cstm-pat-8, .cstm-pat-9) .new-entry-card .new-entry-card-content.card-content {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+}
+
+.cstm-pat-9 .new-list-box.cstm-ect-vertical-card .new-entry-cards,
+.cstm-pat-9 .cstm-ect-vertical-card.new-entry-cards {
+  display: grid;
+  place-content: center;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  -moz-column-gap: 4px;
+  column-gap: 4px;
+  row-gap: 4px;
+}
+
 
 /* More btn */
-.cstm-pat-2 p.cstm-more-btn {
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) p.cstm-more-btn {
   justify-content: center;
   padding-right: 0em;
 }
@@ -1433,7 +1456,7 @@ p.cstm-more-btn a:hover::before {
   /* ========== cstm-pat-common start ==========　*/
   /* coverブロック内の上下の余白 */
   /* clip-pathなし */
-  :where(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7)>.wp-block-cover__inner-container {
+  :where(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7, .cstm-pat-8, .cstm-pat-9)>.wp-block-cover__inner-container {
     padding-top: 3rem;
   }
 
@@ -1484,8 +1507,8 @@ p.cstm-more-btn a:hover::before {
   /* ========== cstm-pat-1 end ==========　*/
 
   /* ========== cstm-pat-2 start ==========　*/
-  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .new-entry-card-title,
-  .cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards .new-entry-card-title {
+  :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-list-box.cstm-ect-vertical-card .new-entry-cards .new-entry-card-title,
+  :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .cstm-ect-vertical-card.new-entry-cards .new-entry-card-title {
     font-size: 16px;
   }
 
@@ -1668,13 +1691,13 @@ p.cstm-more-btn a:hover::before {
 @media screen and (max-width: 834px) {
 
   /* ========== cstm-pat-2 start ==========　*/
-  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards,
-  .cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards {
+  :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-list-box.cstm-ect-vertical-card .new-entry-cards,
+  :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .cstm-ect-vertical-card.new-entry-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .cstm-pat-2 .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap,
-  .cstm-pat-2 .cstm-ect-vertical-card.new-entry-cards .a-wrap {
+  :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-list-box.cstm-ect-vertical-card .new-entry-cards .a-wrap,
+  :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .cstm-ect-vertical-card.new-entry-cards .a-wrap {
     max-width: unset;
   }
 
@@ -1793,7 +1816,7 @@ p.cstm-more-btn a:hover::before {
 
   /* ========== cstm-pat-common start ==========　*/
   /* サンプルパターン共通 */
-  :is(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7)>.wp-block-cover__inner-container h2.cstm-head {
+  :is(.cstm-pat-1, .cstm-pat-2, .cstm-pat-3, .cstm-pat-4, .cstm-pat-5, .cstm-pat-6, .cstm-pat-7, .cstm-pat-8, .cstm-pat-9)>.wp-block-cover__inner-container h2.cstm-head {
     font-size: 48px;
     padding: 0;
   }
