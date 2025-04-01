@@ -794,6 +794,7 @@ p.cstm-more-btn a:hover::before {
 :is(.cstm-pat-8, .cstm-pat-9) .new-entry-card .new-entry-card-content.card-content {
   display: grid;
   grid-template-rows: subgrid;
+  grid-template-columns: subgrid;
   grid-row: span 4;
 }
 
