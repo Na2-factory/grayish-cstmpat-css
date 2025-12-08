@@ -12,9 +12,13 @@
 }
 
 /* ブロックエディター内の横スクロール防止 */
-.editor-styles-wrapper.body.article {
+.editor-styles-wrapper {
   overflow-x: clip;
 }
+
+/* .editor-styles-wrapper.body.article {
+  overflow-x: clip;
+} */
 
 /* サイト型　フロントページのメインコンテンツ上下の余白対策 */
 .body.skin-grayish.front-top-page .breadcrumb,
@@ -760,6 +764,12 @@ p.cstm-more-btn a:hover::before {
   color: var(--skin-grayish-site-sub-color);
   margin-top: auto;
 }
+
+/* Cocoon-2.8.8.3でHTMLが変更になっていることの対応 */
+:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .widget-entry-card-info {
+  justify-content: flex-end;
+}
+
 
 :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-post-date.widget-entry-card-post-date.post-date,
 :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-update-date.widget-entry-card-update-date.post-update {
