@@ -1784,15 +1784,16 @@ p.cstm-more-btn a:hover::before {
     right: -50px;
   }
 
+  /* ver1.1.3 修正 */
   .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
   .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
-    right: -50px;
+    right: -32px;
   }
 
   /* ver1.1.3 修正 */
   .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist.col-mode .navi-entry-card-link .navi-entry-card .ribbon.ribbon-top-left span,
   .cstm-pat-7 .cstm-navi-ribbon.cstm-navi-card-lglist.col-mode .navi-entry-cards .navi-entry-card-link:nth-child(even) .navi-entry-card .ribbon.ribbon-top-left span {
-    right: -32px;
+    right: -50px;
   }
 
   .cstm-pat-7 .cstm-navi-card-lglist .navi-entry-card-link::before {
