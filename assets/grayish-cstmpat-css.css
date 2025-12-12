@@ -765,11 +765,6 @@ p.cstm-more-btn a:hover::before {
   margin-top: auto;
 }
 
-/* Cocoon-2.8.8.3でHTMLが変更になっていることの対応 */
-:is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .widget-entry-card-info {
-  justify-content: flex-end;
-}
-
 
 :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-post-date.widget-entry-card-post-date.post-date,
 :is(.cstm-pat-2, .cstm-pat-8, .cstm-pat-9) .new-entry-card-update-date.widget-entry-card-update-date.post-update {
@@ -1426,6 +1421,10 @@ p.cstm-more-btn a:hover::before {
   caret-color: #000;
 }
 
+/* Cocoon-2.8.8.3でHTMLが変更になっていることの対応 */
+:is(.cstm-pat-2, .cstm-pat-5, .cstm-pat-8, .cstm-pat-9) .widget-entry-card-info {
+  justify-content: flex-end;
+}
 
 
 
